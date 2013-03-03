@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Configuration | Jekyll-Bootstrap</title>
+    <meta name="description" content="Learn how to configure URL formats, and add comments and analytics.
+">
+    <meta name="author" content="x x">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter2/css/custom.css?v=0.3" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes/twitter2/css/syntax.css?body=1" rel="stylesheet" type="text/css" media="all">
+  </head>
+
+  <body>
+
+    <div id="navigation">
+      <ul>
+        <li><a class="brand" href="/">Home</a></li>
+        
+        
+
+
+  
+    
+      
+      <li><a href="/usage/index.html">Start Blogging</a></li>
+      
+    
+  
+    
+      
+      <li><a href="/developers/index.html">Developers</a></li>
+      
+    
+  
+
+
+
+        <li class="divider-vertical"></li>
+        <li><a>
+          Latest Version: <span class="label" style="background:#777">0.2.13</span> 
+          <span class="label" style="background:#777">24-03-2012</span>
+        </a></li>
+      </ul>
+    </div>
+    
+    <div id="main" class="container" style="width:90%; margin:0 auto; position:relative">
+      
+<div class="row-fluid">
+  <div id="left-pane" class="span7">
+    <div class="content post">
+      <h1 class="title">Blog Configuration</h1>
+      Learn how to configure URL formats, and add comments and analytics.
+
+      <p>Your Jekyll-Bootstrap blog can be configured by setting options within the <code>./_config.yml</code> file. You&#8217;ll note the extensive documentation provided within the file itself. Let&#8217;s go over some of these in detail:</p>
+
+<h2 id='blog_post_permalink_format'>Blog Post Permalink Format</h2>
+
+<p>Jekyll provides extensive customization options as to how your blog post permalinks will be generated. You can consult the format table here: <a href='https://github.com/mojombo/jekyll/wiki/Permalinks'>Jekyll Permalinks</a></p>
+
+<p>Jekyll-Bootstrap ships with the traditional default format for blogs:</p>
+<div class='highlight'><pre><code class='yaml'><span class='l-Scalar-Plain'>permalink</span><span class='p-Indicator'>:</span> <span class='l-Scalar-Plain'>/:categories/:year/:month/:day/:title/</span>
+</code></pre></div>
+<p>Any category structure specified on a post will be included within the url, then the date, and finally the post title.</p>
+
+<p>Play around with what url configuration works best for you.</p>
+
+<h2 id='set_base_path'>Set BASE_PATH</h2>
+
+<p><strong>All post and page urls in Jekyll-Bootstrap expect to be prepended with <code>BASE_PATH</code></strong></p>
+
+<p>The <code>BASE_PATH</code> configuration is for special scenarios in which your blog must run from a sub-directory. The main scenario being if your blog will be hosted on a GitHub <strong>Project</strong> Page. If you are deploying this website for one of your GitHub projects you must set <code>BASE_PATH</code> to the name of your GitHub project.</p>
+
+<p>In any case, you can leave this blank if you have defined a <code>CNAME</code> for your site. More info is available at: <a href='http://pages.github.com'>http://pages.github.com</a></p>
+
+<p><strong>NOTE:</strong> <br />When in localhost, your site will run from root &#8221;/&#8221; regardless of <code>BASE_PATH</code>.</p>
+
+<h2 id='enabling_comments'>Enabling Comments</h2>
+
+<p>Jekyll-Bootstrap ships with widget codes that enable commenting for <a href='http://disqus.com'>Disqus</a>, <a href='http://intensedebate.com'>Intense Debate</a>, <a href='http://www.livefyre.com/'>livefyre</a>, and <a href='https://developers.facebook.com/docs/reference/plugins/comments/'>Facebook Comments</a>.</p>
+
+<p>To enable commenting for your blog you will need to have setup an account with one of these providers. In the <code>_config.yml</code> you should see a hash named <code>comments</code> as shown below:</p>
+<div class='highlight'><pre><code class='yaml'><span class='c1'># Settings for comments helper</span>
+<span class='c1'># Set &#39;provider&#39; to the comment provider you want to use.</span>
+<span class='c1'># Set &#39;provider&#39; to false to turn commenting off globally.</span>
+<span class='c1'>#</span>
+<span class='l-Scalar-Plain'>comments</span> <span class='p-Indicator'>:</span>
+  <span class='l-Scalar-Plain'>provider</span> <span class='p-Indicator'>:</span> <span class='l-Scalar-Plain'>disqus</span>
+  <span class='l-Scalar-Plain'>disqus</span> <span class='p-Indicator'>:</span>
+    <span class='l-Scalar-Plain'>short_name</span> <span class='p-Indicator'>:</span> <span class='l-Scalar-Plain'>jekyllbootstrap</span>
+  <span class='l-Scalar-Plain'>livefyre</span> <span class='p-Indicator'>:</span>
+    <span class='l-Scalar-Plain'>site_id</span> <span class='p-Indicator'>:</span> <span class='l-Scalar-Plain'>123</span>
+  <span class='l-Scalar-Plain'>intensedebate</span> <span class='p-Indicator'>:</span>
+    <span class='l-Scalar-Plain'>account</span> <span class='p-Indicator'>:</span> <span class='l-Scalar-Plain'>123abc</span>
+  <span class='l-Scalar-Plain'>facebook</span> <span class='p-Indicator'>:</span>
+    <span class='l-Scalar-Plain'>appid</span> <span class='p-Indicator'>:</span> <span class='l-Scalar-Plain'>123</span>
+    <span class='l-Scalar-Plain'>num_posts</span><span class='p-Indicator'>:</span> <span class='l-Scalar-Plain'>5</span>
+    <span class='l-Scalar-Plain'>width</span><span class='p-Indicator'>:</span> <span class='l-Scalar-Plain'>580</span>
+    <span class='l-Scalar-Plain'>colorscheme</span><span class='p-Indicator'>:</span> <span class='l-Scalar-Plain'>light</span>
+</code></pre></div>
+<h3 id='choose_a_provider'>Choose a Provider</h3>
+
+<p>Set <code>provider</code> to the provider you intend to use. Make sure to specify your account credentials for the relevant provider within the hash named for <em>that</em> provider.</p>
+
+<p>In the example above, the <strong>disqus</strong> provider will be used and will be provided with <strong>jekyllbootstrap</strong> as the account <strong>short_name</strong>.</p>
+
+<h3 id='use_a_custom_provider'>Use a Custom Provider</h3>
+
+<p>To use a custom provider, set <code>provider: custom</code>. Next create a file at this path:</p>
+<div class='highlight'><pre><code class='text'>./_includes/custom/comments
+</code></pre></div>
+<p>This file will load wherever the theme has included its comments so you can inject your own widget code via this file. If you have a provider I don&#8217;t know about, consider opening a <a href='http://github.com/plusjade/jekyll-bootstrap/issues'>GitHub Issue</a> so I can include it!</p>
+
+<h3 id='disable_comments'>Disable Comments</h3>
+
+<p>Set <code>provider: false</code> to disable comments globally.</p>
+
+<p>Disable comments for individual pages/posts by specifying <code>comments: false</code> in the page/post YAML Front Matter:</p>
+<div class='highlight'><pre><code class='yaml'><span class='nn'>---</span>
+<span class='l-Scalar-Plain'>layout</span><span class='p-Indicator'>:</span> <span class='l-Scalar-Plain'>post</span>
+<span class='l-Scalar-Plain'>category</span> <span class='p-Indicator'>:</span> <span class='l-Scalar-Plain'>lessons</span>
+<span class='l-Scalar-Plain'>comments</span> <span class='p-Indicator'>:</span> <span class='l-Scalar-Plain'>false</span>
+<span class='l-Scalar-Plain'>tags</span> <span class='p-Indicator'>:</span> <span class='p-Indicator'>[</span><span class='nv'>yay</span><span class='p-Indicator'>]</span>
+<span class='nn'>---</span>
+</code></pre></div>
+<h2 id='enabling_analytics'>Enabling Analytics</h2>
+
+<p>Jekyll-Bootstrap ships with website analytics codes for <a href='http://google.com/analytics'>Google</a>, and <a href='http://getclicky.com'>GetClicky</a>.</p>
+
+<p>To enable analytics for your blog you will need to have setup an account with one of these providers. In the <code>_config.yml</code> you should see a hash named <code>analytics</code> as shown below:</p>
+<div class='highlight'><pre><code class='yaml'><span class='c1'># Settings for analytics helper</span>
+<span class='c1'># Set &#39;provider&#39; to the analytics provider you want to use.</span>
+<span class='c1'># Set &#39;provider&#39; to false to turn analytics off globally.</span>
+<span class='c1'>#        </span>
+<span class='l-Scalar-Plain'>analytics</span> <span class='p-Indicator'>:</span>
+  <span class='l-Scalar-Plain'>provider</span> <span class='p-Indicator'>:</span> <span class='l-Scalar-Plain'>google</span>
+  <span class='l-Scalar-Plain'>google</span> <span class='p-Indicator'>:</span> 
+      <span class='l-Scalar-Plain'>tracking_id</span> <span class='p-Indicator'>:</span> <span class='s'>&#39;UA-123-12&#39;</span>
+  <span class='l-Scalar-Plain'>getclicky</span> <span class='p-Indicator'>:</span>
+    <span class='l-Scalar-Plain'>site_id</span> <span class='p-Indicator'>:</span>
+</code></pre></div>
+<h3 id='choose_a_provider'>Choose a Provider</h3>
+
+<p>Set <code>provider</code> to the provider you intend to use. Make sure to specify your account credentials for the relevant provider within the hash named for <em>that</em> provider.</p>
+
+<p>In the example above, the <strong>google</strong> provider will be used and will be provided with <strong>UA-123-12</strong> as the account <strong>tracking_id</strong>.</p>
+
+<h3 id='use_a_custom_provider'>Use a Custom Provider</h3>
+
+<p>To use a custom provider, set <code>provider: custom</code>. Next create a file at this path:</p>
+<div class='highlight'><pre><code class='text'>./_includes/custom/analytics
+</code></pre></div>
+<p>This file will load wherever the theme has included its analytics so you can inject your own widget code via this file. If you have a provider I don&#8217;t know about, consider opening a <a href='http://github.com/plusjade/jekyll-bootstrap/issues'>GitHub Issue</a> so I can include it!</p>
+
+<h3 id='disable_analytics'>Disable Analytics</h3>
+
+<p>Set <code>provider: false</code> to disable analytics globally.</p>
+
+<p>Disable analytics for individual pages/posts by specifying <code>analytics: false</code> in the post/page YAML Front Matter:</p>
+<div class='highlight'><pre><code class='yaml'><span class='nn'>---</span>
+<span class='l-Scalar-Plain'>layout</span><span class='p-Indicator'>:</span> <span class='l-Scalar-Plain'>post</span>
+<span class='l-Scalar-Plain'>category</span> <span class='p-Indicator'>:</span> <span class='l-Scalar-Plain'>lessons</span>
+<span class='l-Scalar-Plain'>analytics</span> <span class='p-Indicator'>:</span> <span class='l-Scalar-Plain'>false</span>
+<span class='l-Scalar-Plain'>tags</span> <span class='p-Indicator'>:</span> <span class='p-Indicator'>[</span><span class='nv'>yay</span><span class='p-Indicator'>]</span>
+<span class='nn'>---</span>
+</code></pre></div>
+    
+      <hr>
+      <div>
+        <a href="/usage/deployment-and-hosting.html" class="btn btn-success btn-large">Next Step: Deployment &amp; Hosting &rarr;</a>
+      </div>
+    
+    </div>  
+  </div>
+  <div id="right-pane" class="span5">
+    
+
+<div id="sidebar" class="sidebar">
+  <h4>Start Blogging</h4>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      <li><a href="/usage/jekyll-quick-start.html">Jekyll Quick Start</a></li>
+      
+    
+  
+    
+      
+      <li><a href="/usage/jekyll-theming.html">Using Themes</a></li>
+      
+    
+  
+    
+      
+      <li class="active"><a href="/usage/blog-configuration.html" class="active">Blog Configuration</a></li>
+      
+    
+  
+    
+      
+      <li><a href="/usage/deployment-and-hosting.html">Deployment &amp; Hosting</a></li>
+      
+    
+  
+
+
+
+  </ul>
+  
+</div>
+
+
+  </div>
+</div>
+
+      <hr>
+      <footer class="footer" style="text-align:center; margin:40px 0">
+        <p>Lovingly authored by x x in 2012
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>,
+          <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>, and countless humans.
+        </p>
+        <p>
+          All my work is <a href="http://www.opensource.org/licenses/MIT">MIT licensed, Open and Free</a>. (unless my employer requires otherwise)
+          <br>Though in that case I should work for a company that believes in Open and Free software.
+        </p>
+        <p><a href="https://mixpanel.com/f/partner"><img src="https://mixpanel.com/site_media/images/partner/badge_light.png" alt="Real Time Web Analytics" /></a></p>
+      </footer>
+    </div> <!-- /container -->
+    
+    <a href="http://github.com/plusjade/jekyll-bootstrap"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/assets/themes/twitter2/js/jquery.min.js"><\/script>')</script>
+    <script src="/assets/app.js?v=0.1"></script>
+    
+    <script>
+      $(function(){
+      
+        Toc.init('#sidebar', '#main');
+      
+      })
+    </script>
+    
+    
+  </body>
+</html>
