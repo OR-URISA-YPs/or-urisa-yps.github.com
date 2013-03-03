@@ -1,14 +1,6 @@
-# Jekyll-Bootstrap
+## or-urisa-yps.github.com
+Github pages repository, more work coming soon
 
-The quickest and most hassle-free way to get your new Jekyll powered website up and running.
-100% compatible with GitHub pages.
+#### Notes
 
-<http://jekyllbootstrap.com>
-
-## Development
-
-Development is active! 
-
-## License
-
-[Creative Commons](http://creativecommons.org/licenses/by-nc-sa/3.0/)
+Built with Jekyll-Bootstrap: <http://jekyllbootstrap.com>, which is licensed with [Creative Commons](http://creativecommons.org/licenses/by-nc-sa/3.0/)
