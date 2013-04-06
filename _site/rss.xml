@@ -2,11 +2,11 @@
 <rss version="2.0">
 <channel>
         <title>OR-URISA Young Professionals</title>
-        <description>OR-URISA Young Professionals - Mele Sax-Barnett and Lyzi Diamond</description>
-        <link>http://or-urisa-yps.github.com</link>
-        <link>http://or-urisa-yps.github.com</link>
-        <lastBuildDate>2013-04-06T12:03:56-07:00</lastBuildDate>
-        <pubDate>2013-04-06T12:03:56-07:00</pubDate>
+        <description>OR-URISA Young Professionals - The Oregon URISA Young Professionals Group</description>
+        <link>or-urisa-yps</link>
+        <link>or-urisa-yps</link>
+        <lastBuildDate>2013-04-06T12:17:32-07:00</lastBuildDate>
+        <pubDate>2013-04-06T12:17:32-07:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -325,8 +325,8 @@
     &lt;a href='/api/2011/11/30/template-data-api'&gt;Next Step: Template Data Api &amp;rarr;&lt;/a&gt;
   &lt;/li&gt;
 &lt;/ul&gt;</description>
-                <link>http://or-urisa-yps.github.com/lessons/2011/12/29/jekyll-introduction</link>
-                <guid>http://or-urisa-yps.github.com/lessons/2011/12/29/jekyll-introduction</guid>
+                <link>or-urisa-yps/lessons/2011/12/29/jekyll-introduction</link>
+                <guid>or-urisa-yps/lessons/2011/12/29/jekyll-introduction</guid>
                 <pubDate>2011-12-29T00:00:00-08:00</pubDate>
         </item>
 
@@ -650,8 +650,8 @@ tags : [how-to, jekyll]
 &lt;h2 id='next_steps'&gt;Next Steps&lt;/h2&gt;
 
 &lt;p&gt;Please take a look at &lt;a href='/api/2011/11/30/template-data-api'&gt;Template Data Api&lt;/a&gt; or jump right into &lt;a href='/usage/2011/10/31/jekyll-quick-start'&gt;Usage&lt;/a&gt; if you&amp;#8217;d like.&lt;/p&gt;</description>
-                <link>http://or-urisa-yps.github.com/lessons/2011/12/29/jekyll-introduction</link>
-                <guid>http://or-urisa-yps.github.com/lessons/2011/12/29/jekyll-introduction</guid>
+                <link>or-urisa-yps/lessons/2011/12/29/jekyll-introduction</link>
+                <guid>or-urisa-yps/lessons/2011/12/29/jekyll-introduction</guid>
                 <pubDate>2011-12-29T00:00:00-08:00</pubDate>
         </item>
 
@@ -795,8 +795,8 @@ tags : [how-to, jekyll]
 &lt;p&gt;Tags may only be applied to posts and are available on a per-post basis as well as aggregated in a sitewide global variable, i.e. all tags available for the website.&lt;/p&gt;
 
 &lt;p&gt;When iterating over tags the order is alpha descending.&lt;/p&gt;</description>
-                <link>http://or-urisa-yps.github.com/api/2011/11/30/template-data-api</link>
-                <guid>http://or-urisa-yps.github.com/api/2011/11/30/template-data-api</guid>
+                <link>or-urisa-yps/api/2011/11/30/template-data-api</link>
+                <guid>or-urisa-yps/api/2011/11/30/template-data-api</guid>
                 <pubDate>2011-11-30T00:00:00-08:00</pubDate>
         </item>
 
@@ -821,8 +821,8 @@ tags : [how-to, jekyll]
 &lt;p&gt;Jekyll introduces a few other filters and tags as outlined here:&lt;/p&gt;
 
 &lt;p&gt;&lt;a href='http://github.com/mojombo/jekyll/wiki/Liquid-Extensions'&gt;http://github.com/mojombo/jekyll/wiki/Liquid-Extensions&lt;/a&gt;&lt;/p&gt;</description>
-                <link>http://or-urisa-yps.github.com/api/2011/11/29/jekyll-liquid-api</link>
-                <guid>http://or-urisa-yps.github.com/api/2011/11/29/jekyll-liquid-api</guid>
+                <link>or-urisa-yps/api/2011/11/29/jekyll-liquid-api</link>
+                <guid>or-urisa-yps/api/2011/11/29/jekyll-liquid-api</guid>
                 <pubDate>2011-11-29T00:00:00-08:00</pubDate>
         </item>
 
@@ -1050,8 +1050,8 @@ group: project
 &lt;p&gt;This file, exactly as named, will be used in place of the source Jekyll-Bootstrap file. You&amp;#8217;ll probably want to copy the &amp;#8220;meat&amp;#8221; of the code logic from the original source file into your custom file and then edit it as needed.&lt;/p&gt;
 
 &lt;p&gt;You can follow this procedure for as many methods as you wish.&lt;/p&gt;</description>
-                <link>http://or-urisa-yps.github.com/api/2011/11/28/bootstrap-api</link>
-                <guid>http://or-urisa-yps.github.com/api/2011/11/28/bootstrap-api</guid>
+                <link>or-urisa-yps/api/2011/11/28/bootstrap-api</link>
+                <guid>or-urisa-yps/api/2011/11/28/bootstrap-api</guid>
                 <pubDate>2011-11-28T00:00:00-08:00</pubDate>
         </item>
 
@@ -1200,8 +1200,8 @@ group: project
 &lt;h3 id='profit'&gt;Profit!&lt;/h3&gt;
 
 &lt;p&gt;Well maybe in the future, but right now if you&amp;#8217;d like to have your theme officially included in the theme explorer, please put your packaged theme on GitHub and notify me. I&amp;#8217;ll work out a better system shortly. &lt;strong&gt;Thanks!&lt;/strong&gt;&lt;/p&gt;</description>
-                <link>http://or-urisa-yps.github.com/api/2011/11/27/theme-api</link>
-                <guid>http://or-urisa-yps.github.com/api/2011/11/27/theme-api</guid>
+                <link>or-urisa-yps/api/2011/11/27/theme-api</link>
+                <guid>or-urisa-yps/api/2011/11/27/theme-api</guid>
                 <pubDate>2011-11-27T00:00:00-08:00</pubDate>
         </item>
 
@@ -1350,8 +1350,8 @@ group: project
 &lt;h3 id='jekyll_introduction'&gt;Jekyll Introduction&lt;/h3&gt;
 &lt;span class='label notice'&gt;highly recommend&lt;/span&gt;
 &lt;p&gt;I highly recommend reading the &lt;a href='/lessons/2011/12/29/jekyll-introduction'&gt;Jekyll Introduction&lt;/a&gt; if you plan to customize your blog. The introduction is meant for core understanding of how and why Jekyll works the way it does. This will provide you with the proper context, knowledge-base, and fundamentals necessary to understand and be efficient in working with Jekyll and Jekyll-Bootstrap.&lt;/p&gt;</description>
-                <link>http://or-urisa-yps.github.com/usage/2011/10/31/jekyll-quick-start</link>
-                <guid>http://or-urisa-yps.github.com/usage/2011/10/31/jekyll-quick-start</guid>
+                <link>or-urisa-yps/usage/2011/10/31/jekyll-quick-start</link>
+                <guid>or-urisa-yps/usage/2011/10/31/jekyll-quick-start</guid>
                 <pubDate>2011-10-31T00:00:00-07:00</pubDate>
         </item>
 
@@ -1369,7 +1369,7 @@ group: project
 
 &lt;p&gt;You can find and browse the latest official themes in the &lt;a href='http://themes.jekyllbootstrap.com'&gt;Theme Explorer&lt;/a&gt;. The theme explorer is still a work in progress; it shows full-website previews of all available themes.&lt;/p&gt;
 &lt;div style='ext-align:right; margin-bottom:10px'&gt;
-  &lt;a style='' class='btn primary' href='http://themes.jekyllbootstrap.com'&gt;Launch Theme Explorer&lt;/a&gt;
+  &lt;a href='http://themes.jekyllbootstrap.com' style='' class='btn primary'&gt;Launch Theme Explorer&lt;/a&gt;
 &lt;/div&gt;
 &lt;p&gt;Additionally, designers are free to publish their own themes as long as they are packaged appropriately. You can then use the same installation method outlined below to install the theme.&lt;/p&gt;
 
@@ -1409,8 +1409,8 @@ group: project
 &lt;h2 id='add_your_own_theme'&gt;Add Your Own Theme&lt;/h2&gt;
 
 &lt;p&gt;Read the &lt;a href='/api/theme-api.html'&gt;Theme API Documentation&lt;/a&gt; for instructions on how to build and publish custom themes for Jekyll Bootstrap.&lt;/p&gt;</description>
-                <link>http://or-urisa-yps.github.com/usage/2011/10/30/jekyll-theming</link>
-                <guid>http://or-urisa-yps.github.com/usage/2011/10/30/jekyll-theming</guid>
+                <link>or-urisa-yps/usage/2011/10/30/jekyll-theming</link>
+                <guid>or-urisa-yps/usage/2011/10/30/jekyll-theming</guid>
                 <pubDate>2011-10-30T00:00:00-07:00</pubDate>
         </item>
 
@@ -1528,8 +1528,8 @@ group: project
 &lt;span class='l-Scalar-Plain'&gt;tags&lt;/span&gt; &lt;span class='p-Indicator'&gt;:&lt;/span&gt; &lt;span class='p-Indicator'&gt;[&lt;/span&gt;&lt;span class='nv'&gt;yay&lt;/span&gt;&lt;span class='p-Indicator'&gt;]&lt;/span&gt;
 &lt;span class='nn'&gt;---&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-                <link>http://or-urisa-yps.github.com/usage/2011/10/29/blog-configuration</link>
-                <guid>http://or-urisa-yps.github.com/usage/2011/10/29/blog-configuration</guid>
+                <link>or-urisa-yps/usage/2011/10/29/blog-configuration</link>
+                <guid>or-urisa-yps/usage/2011/10/29/blog-configuration</guid>
                 <pubDate>2011-10-29T00:00:00-07:00</pubDate>
         </item>
 
@@ -1554,8 +1554,8 @@ group: project
 &lt;p&gt;The main reason you&amp;#8217;d want to host your website yourself is because you can then run custom plugins and customize Jekyll to your heart&amp;#8217;s content.&lt;/p&gt;
 
 &lt;p&gt;Please see the original docs for &lt;a href='https://github.com/mojombo/jekyll/wiki/Deployment'&gt;custom Jekyll deployment strategies&lt;/a&gt;.&lt;/p&gt;</description>
-                <link>http://or-urisa-yps.github.com/usage/2011/10/28/deployment-and-hosting</link>
-                <guid>http://or-urisa-yps.github.com/usage/2011/10/28/deployment-and-hosting</guid>
+                <link>or-urisa-yps/usage/2011/10/28/deployment-and-hosting</link>
+                <guid>or-urisa-yps/usage/2011/10/28/deployment-and-hosting</guid>
                 <pubDate>2011-10-28T00:00:00-07:00</pubDate>
         </item>
 

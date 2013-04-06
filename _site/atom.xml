@@ -2,21 +2,21 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
  
  <title>OR-URISA Young Professionals</title>
- <link href="http://or-urisa-yps.github.com/" rel="self"/>
- <link href="http://or-urisa-yps.github.com"/>
- <updated>2013-04-06T12:03:56-07:00</updated>
- <id>http://or-urisa-yps.github.com</id>
+ <link href="or-urisa-yps/" rel="self"/>
+ <link href="or-urisa-yps"/>
+ <updated>2013-04-06T12:17:32-07:00</updated>
+ <id>or-urisa-yps</id>
  <author>
-   <name>Mele Sax-Barnett and Lyzi Diamond</name>
-   <email>saxbarm@gmail.com</email>
+   <name>The Oregon URISA Young Professionals Group</name>
+   <email>or-urisa-young-professionals@googlegroups.com</email>
  </author>
 
  
  <entry>
    <title>Jekyll Introduction</title>
-   <link href="http://or-urisa-yps.github.com/lessons/2011/12/29/jekyll-introduction"/>
+   <link href="or-urisa-yps/lessons/2011/12/29/jekyll-introduction"/>
    <updated>2011-12-29T00:00:00-08:00</updated>
-   <id>http://or-urisa-yps.github.com/lessons/2011/12/29/jekyll-introduction</id>
+   <id>or-urisa-yps/lessons/2011/12/29/jekyll-introduction</id>
    <content type="html">&lt;h2 id='overview'&gt;Overview&lt;/h2&gt;
 
 &lt;h3 id='what_is_jekyll'&gt;What is Jekyll?&lt;/h3&gt;
@@ -334,9 +334,9 @@
  
  <entry>
    <title>Jekyll Introduction</title>
-   <link href="http://or-urisa-yps.github.com/lessons/2011/12/29/jekyll-introduction"/>
+   <link href="or-urisa-yps/lessons/2011/12/29/jekyll-introduction"/>
    <updated>2011-12-29T00:00:00-08:00</updated>
-   <id>http://or-urisa-yps.github.com/lessons/2011/12/29/jekyll-introduction</id>
+   <id>or-urisa-yps/lessons/2011/12/29/jekyll-introduction</id>
    <content type="html">&lt;p&gt;This Jekyll introduction will outline specifically what Jekyll is and why you would want to use it. Directly following the intro we&amp;#8217;ll learn exactly &lt;em&gt;how&lt;/em&gt; Jekyll does what it does.&lt;/p&gt;
 
 &lt;h2 id='overview'&gt;Overview&lt;/h2&gt;
@@ -659,9 +659,9 @@ tags : [how-to, jekyll]
  
  <entry>
    <title>Template Data Api</title>
-   <link href="http://or-urisa-yps.github.com/api/2011/11/30/template-data-api"/>
+   <link href="or-urisa-yps/api/2011/11/30/template-data-api"/>
    <updated>2011-11-30T00:00:00-08:00</updated>
-   <id>http://or-urisa-yps.github.com/api/2011/11/30/template-data-api</id>
+   <id>or-urisa-yps/api/2011/11/30/template-data-api</id>
    <content type="html">&lt;h2 id='global_pagepost_data'&gt;Global Page/Post Data&lt;/h2&gt;
 
 &lt;p&gt;Every content file that Jekyll processes is either a page or a post. In both cases the data relative to the specific page or post being rendered within the template is accessible through the &lt;code&gt;page&lt;/code&gt; variable. The page variable is a globally accessible variable available to all templates, posts, pages, and includes being rendered for the given post/page instance.&lt;/p&gt;
@@ -804,9 +804,9 @@ tags : [how-to, jekyll]
  
  <entry>
    <title>Jekyll Liquid Api</title>
-   <link href="http://or-urisa-yps.github.com/api/2011/11/29/jekyll-liquid-api"/>
+   <link href="or-urisa-yps/api/2011/11/29/jekyll-liquid-api"/>
    <updated>2011-11-29T00:00:00-08:00</updated>
-   <id>http://or-urisa-yps.github.com/api/2011/11/29/jekyll-liquid-api</id>
+   <id>or-urisa-yps/api/2011/11/29/jekyll-liquid-api</id>
    <content type="html">&lt;h2 id='introduction'&gt;Introduction&lt;/h2&gt;
 
 &lt;p&gt;Jekyll uses the standard Liquid templating language package and includes a few other helpful extensions of its own.&lt;/p&gt;
@@ -830,9 +830,9 @@ tags : [how-to, jekyll]
  
  <entry>
    <title>Jekyll Bootstrap API</title>
-   <link href="http://or-urisa-yps.github.com/api/2011/11/28/bootstrap-api"/>
+   <link href="or-urisa-yps/api/2011/11/28/bootstrap-api"/>
    <updated>2011-11-28T00:00:00-08:00</updated>
-   <id>http://or-urisa-yps.github.com/api/2011/11/28/bootstrap-api</id>
+   <id>or-urisa-yps/api/2011/11/28/bootstrap-api</id>
    <content type="html">&lt;h2 id='how_it_works'&gt;How it Works&lt;/h2&gt;
 
 &lt;p&gt;The Bootstrap API takes advantage of Jekyll&amp;#8217;s ability to &amp;#8220;include&amp;#8221; files within other files. This allows us to package chunks of complex &lt;a href='http://liquidmarkup.org/'&gt;Liquid&lt;/a&gt; code into reusable modules that can be called throughout your templates, pages, and posts.&lt;/p&gt;
@@ -1059,9 +1059,9 @@ group: project
  
  <entry>
    <title>Theme API</title>
-   <link href="http://or-urisa-yps.github.com/api/2011/11/27/theme-api"/>
+   <link href="or-urisa-yps/api/2011/11/27/theme-api"/>
    <updated>2011-11-27T00:00:00-08:00</updated>
-   <id>http://or-urisa-yps.github.com/api/2011/11/27/theme-api</id>
+   <id>or-urisa-yps/api/2011/11/27/theme-api</id>
    <content type="html">&lt;p&gt;Because we depend on Jekyll and Liquid, supporting modular theming requires some special considerations that are not always the most elegant solution. I expect the process to evolve over time so thanks for your feedback, patience, and support!&lt;/p&gt;
 &lt;span class='label notice'&gt;Recommended&lt;/span&gt;
 &lt;p&gt;View and study the repos for current published themes. &lt;a href='http://github.com/jekyllbootstrap/'&gt;http://github.com/jekyllbootstrap/&lt;/a&gt;&lt;/p&gt;
@@ -1209,9 +1209,9 @@ group: project
  
  <entry>
    <title>Jekyll Quick Start</title>
-   <link href="http://or-urisa-yps.github.com/usage/2011/10/31/jekyll-quick-start"/>
+   <link href="or-urisa-yps/usage/2011/10/31/jekyll-quick-start"/>
    <updated>2011-10-31T00:00:00-07:00</updated>
-   <id>http://or-urisa-yps.github.com/usage/2011/10/31/jekyll-quick-start</id>
+   <id>or-urisa-yps/usage/2011/10/31/jekyll-quick-start</id>
    <content type="html">&lt;h2 id='1_install_jekyllbootstrap'&gt;1. Install Jekyll-Bootstrap&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href='/index.html#start-now'&gt;Install Jekyll-Bootsrap&lt;/a&gt; if you haven&amp;#8217;t already. Jekyll-bootstrap is a blogging framework with built-in support for theming, analytics, comments, and post/page creation.&lt;/p&gt;
@@ -1359,9 +1359,9 @@ group: project
  
  <entry>
    <title>Using Themes</title>
-   <link href="http://or-urisa-yps.github.com/usage/2011/10/30/jekyll-theming"/>
+   <link href="or-urisa-yps/usage/2011/10/30/jekyll-theming"/>
    <updated>2011-10-30T00:00:00-07:00</updated>
-   <id>http://or-urisa-yps.github.com/usage/2011/10/30/jekyll-theming</id>
+   <id>or-urisa-yps/usage/2011/10/30/jekyll-theming</id>
    <content type="html">&lt;h2 id='introduction'&gt;Introduction&lt;/h2&gt;
 
 &lt;p&gt;As of JB version 0.2.x themes are now entirely modular. They are tracked and versioned individually as &lt;strong&gt;Theme Packages&lt;/strong&gt;. This allows everyone to publish and share themes freely.&lt;/p&gt;
@@ -1374,7 +1374,7 @@ group: project
 
 &lt;p&gt;You can find and browse the latest official themes in the &lt;a href='http://themes.jekyllbootstrap.com'&gt;Theme Explorer&lt;/a&gt;. The theme explorer is still a work in progress; it shows full-website previews of all available themes.&lt;/p&gt;
 &lt;div style='ext-align:right; margin-bottom:10px'&gt;
-  &lt;a style='' class='btn primary' href='http://themes.jekyllbootstrap.com'&gt;Launch Theme Explorer&lt;/a&gt;
+  &lt;a href='http://themes.jekyllbootstrap.com' style='' class='btn primary'&gt;Launch Theme Explorer&lt;/a&gt;
 &lt;/div&gt;
 &lt;p&gt;Additionally, designers are free to publish their own themes as long as they are packaged appropriately. You can then use the same installation method outlined below to install the theme.&lt;/p&gt;
 
@@ -1418,9 +1418,9 @@ group: project
  
  <entry>
    <title>Blog Configuration</title>
-   <link href="http://or-urisa-yps.github.com/usage/2011/10/29/blog-configuration"/>
+   <link href="or-urisa-yps/usage/2011/10/29/blog-configuration"/>
    <updated>2011-10-29T00:00:00-07:00</updated>
-   <id>http://or-urisa-yps.github.com/usage/2011/10/29/blog-configuration</id>
+   <id>or-urisa-yps/usage/2011/10/29/blog-configuration</id>
    <content type="html">&lt;p&gt;Your Jekyll-Bootstrap blog can be configured by setting options within the &lt;code&gt;./_config.yml&lt;/code&gt; file. You&amp;#8217;ll note the extensive documentation provided within the file itself. Let&amp;#8217;s go over some of these in detail:&lt;/p&gt;
 
 &lt;h2 id='blog_post_permalink_format'&gt;Blog Post Permalink Format&lt;/h2&gt;
@@ -1537,9 +1537,9 @@ group: project
  
  <entry>
    <title>Deployment &amp; Hosting</title>
-   <link href="http://or-urisa-yps.github.com/usage/2011/10/28/deployment-and-hosting"/>
+   <link href="or-urisa-yps/usage/2011/10/28/deployment-and-hosting"/>
    <updated>2011-10-28T00:00:00-07:00</updated>
-   <id>http://or-urisa-yps.github.com/usage/2011/10/28/deployment-and-hosting</id>
+   <id>or-urisa-yps/usage/2011/10/28/deployment-and-hosting</id>
    <content type="html">&lt;h2 id='deploy_jekyll_to_github_pages'&gt;Deploy Jekyll to GitHub Pages&lt;/h2&gt;
 
 &lt;p&gt;You can deploy Jekyll to your GitHub account and GitHub will parse your repo through Jekyll and host the result on username.github.com This is very nice of GitHub and the most convenient strategy. However you cannot extend jekyll via plugins with this version because GitHub will not run them for security reasons.&lt;/p&gt;
