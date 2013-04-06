@@ -5,8 +5,8 @@
         <description>OR-URISA Young Professionals - The Oregon URISA Young Professionals Group</description>
         <link>or-urisa-yps</link>
         <link>or-urisa-yps</link>
-        <lastBuildDate>2013-04-06T13:16:15-07:00</lastBuildDate>
-        <pubDate>2013-04-06T13:16:15-07:00</pubDate>
+        <lastBuildDate>2013-04-06T13:35:20-07:00</lastBuildDate>
+        <pubDate>2013-04-06T13:35:20-07:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -1369,7 +1369,7 @@ group: project
 
 &lt;p&gt;You can find and browse the latest official themes in the &lt;a href='http://themes.jekyllbootstrap.com'&gt;Theme Explorer&lt;/a&gt;. The theme explorer is still a work in progress; it shows full-website previews of all available themes.&lt;/p&gt;
 &lt;div style='ext-align:right; margin-bottom:10px'&gt;
-  &lt;a style='' href='http://themes.jekyllbootstrap.com' class='btn primary'&gt;Launch Theme Explorer&lt;/a&gt;
+  &lt;a href='http://themes.jekyllbootstrap.com' style='' class='btn primary'&gt;Launch Theme Explorer&lt;/a&gt;
 &lt;/div&gt;
 &lt;p&gt;Additionally, designers are free to publish their own themes as long as they are packaged appropriately. You can then use the same installation method outlined below to install the theme.&lt;/p&gt;
 
