@@ -10,11 +10,11 @@ pygments: true
 # so be sure to set them if your theme uses them.
 #
 title : OR-URISA Young Professionals
-tagline: GitHub site
+tagline: 
 author :
-  name : Mele Sax-Barnett and Lyzi Diamond
-  email : saxbarm@gmail.com
-  github : pdxmele / lyzidiamond
+  name : The Oregon URISA Young Professionals Group
+  email : or-urisa-young-professionals@googlegroups.com
+  github : OR-URISA-YPs
   twitter : @ORURISAYP
   feedburner : n/a
 
@@ -26,7 +26,7 @@ author :
 # Else if you are pushing to username.github.com, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://or-urisa-yps.github.com
+production_url : or-urisa-yps
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
