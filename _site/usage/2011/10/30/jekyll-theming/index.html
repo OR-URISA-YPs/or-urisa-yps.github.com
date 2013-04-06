@@ -33,7 +33,7 @@
 
 <p>You can find and browse the latest official themes in the <a href='http://themes.jekyllbootstrap.com'>Theme Explorer</a>. The theme explorer is still a work in progress; it shows full-website previews of all available themes.</p>
 <div style='ext-align:right; margin-bottom:10px'>
-  <a href='http://themes.jekyllbootstrap.com' class='btn primary' style=''>Launch Theme Explorer</a>
+  <a class='btn primary' href='http://themes.jekyllbootstrap.com' style=''>Launch Theme Explorer</a>
 </div>
 <p>Additionally, designers are free to publish their own themes as long as they are packaged appropriately. You can then use the same installation method outlined below to install the theme.</p>
 
@@ -43,10 +43,12 @@
 
 <p>Install a theme by using the rake task and passing in the theme&#8217;s git url.</p>
 <div class='highlight'><pre><code class='bash'><span class='nv'>$ </span>rake theme:install <span class='nv'>git</span><span class='o'>=</span><span class='s2'>&quot;https://github.com/jekyllbootstrap/theme-the-program.git&quot;</span>
-</code></pre></div>
+</code></pre>
+</div>
 <p>The installer uses git to download the Theme Package and then installs it. If you have obtained a Theme Package in another way, such as zip download, you can manually place it into your <code>./_theme_packages</code> folder and then run the installer with the name of the theme.</p>
 <div class='highlight'><pre><code class='bash'><span class='nv'>$ </span>rake theme:install <span class='nv'>name</span><span class='o'>=</span><span class='s2'>&quot;THEME-NAME&quot;</span>
-</code></pre></div>
+</code></pre>
+</div>
 <p>As a convenience, after the install is successful, the task will ask you if you&#8217;d like to switch to the newly installed theme. Type &#8216;y&#8217; and enter to switch!</p>
 
 <h2 id='switch_themes'>Switch Themes</h2>
@@ -54,7 +56,8 @@
 <p>Once your themes are installed you can switch between them via rake task:</p>
 <div class='highlight'><pre><code class='bash'><span class='nv'>$ </span>rake theme:switch <span class='nv'>name</span><span class='o'>=</span><span class='s2'>&quot;the-program&quot;</span>
 <span class='c'># for 0.1.0 users `rake switch_theme` still works.</span>
-</code></pre></div>
+</code></pre>
+</div>
 <h2 id='customize_themes'>Customize Themes</h2>
 
 <p>Theme layouts are contained in <code>./_includes/themes/THEME-NAME</code>. It is important that you edit files in the theme directory rather than <code>_layouts</code> because switching themes will overwrite files in the <code>_layout</code> directory and you will lose your changes. The main point here is keeping themes modular; this way editing one does not affect the other.</p>
@@ -65,7 +68,8 @@
 
 <p>However if you want to add theme-specific layouts you should add them to the theme&#8217;s directory in <code>_includes</code>. After your files are added make sure to run the switcher again:</p>
 <div class='highlight'><pre><code class='bash'><span class='nv'>$ </span>rake theme:switch <span class='nv'>name</span><span class='o'>=</span><span class='s2'>&quot;the-minimum&quot;</span>
-</code></pre></div>
+</code></pre>
+</div>
 <h3 id='static_assets'>Static Assets</h3>
 
 <p>Static assets are name-spaced for each theme. They are available at <code>./assets/themes/THEME-NAME</code>. Make sure you edit and add assets in this directory. All themes are provided with the liquid variable: <code>ASSET_PATH</code> which trace back to the aforementioned directory.</p>
