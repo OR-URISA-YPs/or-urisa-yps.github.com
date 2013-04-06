@@ -1,0 +1,340 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 ie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8 ie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9 ie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Template Data Api</title>
+	<meta name="author" content="Mele Sax-Barnett and Lyzi Diamond">
+	<link href='/assets/themes/the-minimum/css/style.css' rel="stylesheet" media="all">
+	<link href="http://feeds.feedburner.com/" rel="alternate" title="Template Data Api" type="application/atom+xml">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
+</head>
+<body>
+
+<div id="page" class="hentry">
+	<header class="the-header">
+		<div class="unit-head">
+			<div class="unit-inner unit-head-inner">
+				<p class="logo"><a href="/">OR-URISA Young Professionals</a></p>
+				<nav class="nav-global">
+					<ul>
+						<li class="archive"><a href="/archive.html">archive</a></li>
+						<li class="page"><a href="/pages.html">pages</a></li>
+						<li class="category"><a href="/categories.html">categories</a></li>
+						<li class="tag"><a href="/tags.html">tags</a></li>
+						<li class="forkme"><iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=plusjade&repo=jekyll-bootstrap&type=fork&count=true"
+								allowtransparency="true" frameborder="0" scrolling="0" width="95px" height="20px"></iframe></li>
+					</ul>
+				</nav>
+			</div><!-- unit-inner -->
+		</div><!-- unit-head -->
+	</header>
+	<div class="body" role="main">
+		<div class="unit-body">
+			<div class="unit-inner unit-body-inner">
+				<div class="entry-content">
+					
+<article class="unit-article layout-post">
+	<div class="unit-inner unit-article-inner">
+		<div class="content">
+			<header>
+				<div class="unit-head">
+					<div class="unit-inner unit-head-inner">
+						<h1 class="h2 entry-title">Template Data Api</h1>
+					</div><!-- unit-inner -->
+				</div><!-- unit-head -->
+			</header>
+
+			<div class="bd">
+				<div class="entry-content">
+					<h2 id='global_pagepost_data'>Global Page/Post Data</h2>
+
+<p>Every content file that Jekyll processes is either a page or a post. In both cases the data relative to the specific page or post being rendered within the template is accessible through the <code>page</code> variable. The page variable is a globally accessible variable available to all templates, posts, pages, and includes being rendered for the given post/page instance.</p>
+<div class='highlight'><pre><code class='ruby'><span class='c1'># The following format represents a Jekyll::Post or Jekyll::Page object. </span>
+<span class='c1'># Jekyll::Post and Jekyll::Page objects may be nested in other variables in which case you can expect this same format:</span>
+<span class='n'>page</span> <span class='o'>=</span> <span class='p'>{</span>
+ <span class='s2'>&quot;layout&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;post&quot;</span><span class='p'>,</span>
+ <span class='s2'>&quot;categories&quot;</span><span class='o'>=&gt;[</span><span class='s2'>&quot;lessons&quot;</span><span class='o'>]</span><span class='p'>,</span>
+ <span class='s2'>&quot;title&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;Jekyll Liquid Api&quot;</span><span class='p'>,</span>
+ <span class='s2'>&quot;url&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;/lessons/jekyll-liquid-api.html&quot;</span><span class='p'>,</span>
+ <span class='s2'>&quot;date&quot;</span><span class='o'>=&gt;</span><span class='mi'>2011</span><span class='o'>-</span><span class='mo'>01</span><span class='o'>-</span><span class='mi'>27</span> <span class='mo'>00</span><span class='p'>:</span><span class='mo'>00</span><span class='p'>:</span><span class='mo'>00</span> <span class='o'>-</span><span class='mi'>0800</span><span class='p'>,</span>
+ <span class='s2'>&quot;id&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;/lessons/jekyll-liquid-api&quot;</span><span class='p'>,</span>
+ <span class='s2'>&quot;next&quot;</span><span class='o'>=&gt;</span> <span class='c1'>#Jekyll:Post @id=&quot;/lessons/template-data-api&quot;,</span>
+ <span class='s2'>&quot;previous&quot;</span><span class='o'>=&gt;</span> <span class='c1'>#Jekyll:Post @id=&quot;/lessons/configuring-urls&quot;,</span>
+ <span class='s2'>&quot;tags&quot;</span><span class='o'>=&gt;[</span><span class='s2'>&quot;tagname1&quot;</span><span class='p'>,</span> <span class='s2'>&quot;tagname2&quot;</span><span class='o'>]</span><span class='p'>,</span>
+ <span class='s2'>&quot;custom_variable&quot;</span><span class='o'>=&gt;</span> <span class='o'>[</span><span class='s2'>&quot;a&quot;</span><span class='p'>,</span> <span class='s2'>&quot;custom&quot;</span><span class='p'>,</span> <span class='s2'>&quot;defined&quot;</span><span class='p'>,</span> <span class='s2'>&quot;data-structure&quot;</span><span class='o'>]</span><span class='p'>,</span>
+ <span class='s2'>&quot;content&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;... this is the unparsed raw html page/post content ...&quot;</span>
+<span class='p'>}</span>
+</code></pre></div>
+<h3 id='setting_custom_data'>Setting Custom Data</h3>
+
+<p>You can set custom variables through the post or page Yaml Front matter and they will be included in the page hash.</p>
+
+<p>One important thing to note is that each Jekyll &#8220;rendering&#8221; instance is treating as a page/post object. ALL YAML Front matter is merged into the current page/post instance. So if you define custom data in the post file, then define custom data in the sub-template, and also in the root template, all data will merge into the same page hash.</p>
+
+<h2 id='content_data'>Content Data</h2>
+
+<p>Jekyll uses a special variable named <code>content</code> to refer to the current page/post content.</p>
+
+<p>The difference between <code>content</code> and <code>page.content</code> is the former is parsed with markdown or textile while the latter is raw.</p>
+
+<p>The <code>content</code> variable is only accessible in template files and include files provided the include is included into a template.</p>
+
+<h3 id='content_in_primary_templates'>Content in Primary Templates.</h3>
+
+<p>When calling <code>content</code> in a primary template the content includes any sub-templates previously rendered by the page/post.</p>
+
+<h3 id='content_in_subtemplates'>Content in Sub-Templates.</h3>
+
+<p>When calling <code>content</code> in a sub-template <code>content</code> includes any sub-sub-templates previously rendered by the page/post. If there are none, <code>content</code> just reflects the page/post as processed by markdown or textile.</p>
+
+<h2 id='global_site_data'>Global Site Data</h2>
+
+<p>This data is available anywhere liquid is available. This includes templates, posts, pages, and includes.</p>
+<div class='highlight'><pre><code class='ruby'><span class='n'>site</span> <span class='o'>=</span> <span class='p'>{</span>
+  <span class='s2'>&quot;related_posts&quot;</span><span class='o'>=&gt;</span>
+    <span class='o'>[.</span><span class='n'>.</span><span class='o'>.</span><span class='p'>(</span><span class='nb'>Array</span> <span class='n'>of</span> <span class='n'>liquified</span> <span class='ss'>Jekyll</span><span class='p'>:</span><span class='ss'>:Post</span> <span class='n'>objects</span><span class='p'>)</span><span class='o'>.</span><span class='n'>.</span><span class='o'>.]</span><span class='p'>,</span>
+ <span class='s2'>&quot;safe&quot;</span><span class='o'>=&gt;</span><span class='kp'>false</span><span class='p'>,</span>
+ <span class='s2'>&quot;auto&quot;</span><span class='o'>=&gt;</span><span class='kp'>true</span><span class='p'>,</span>
+ <span class='s2'>&quot;server&quot;</span><span class='o'>=&gt;</span><span class='kp'>true</span><span class='p'>,</span>
+ <span class='s2'>&quot;server_port&quot;</span><span class='o'>=&gt;</span><span class='mi'>4000</span><span class='p'>,</span>
+ <span class='s2'>&quot;source&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;/Users/jade/Dropbox/github/jekyll-bootstrap&quot;</span><span class='p'>,</span>
+ <span class='s2'>&quot;destination&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;/Users/jade/Dropbox/github/jekyll-bootstrap/_site&quot;</span><span class='p'>,</span>
+ <span class='s2'>&quot;plugins&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;/Users/jade/Dropbox/github/jekyll-bootstrap/_plugins&quot;</span><span class='p'>,</span>
+ <span class='s2'>&quot;future&quot;</span><span class='o'>=&gt;</span><span class='kp'>true</span><span class='p'>,</span>
+ <span class='s2'>&quot;lsi&quot;</span><span class='o'>=&gt;</span><span class='kp'>false</span><span class='p'>,</span>
+ <span class='s2'>&quot;pygments&quot;</span><span class='o'>=&gt;</span><span class='kp'>false</span><span class='p'>,</span>
+ <span class='s2'>&quot;markdown&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;maruku&quot;</span><span class='p'>,</span>
+ <span class='s2'>&quot;permalink&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;/:categories/:title.html&quot;</span><span class='p'>,</span>
+ <span class='s2'>&quot;markdown_ext&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;markdown,mkd,mkdn,md&quot;</span><span class='p'>,</span>
+ <span class='s2'>&quot;textile_ext&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;textile&quot;</span><span class='p'>,</span>
+ <span class='s2'>&quot;maruku&quot;</span><span class='o'>=&gt;</span>
+  <span class='p'>{</span>
+   <span class='s2'>&quot;use_tex&quot;</span><span class='o'>=&gt;</span><span class='kp'>false</span><span class='p'>,</span>
+   <span class='s2'>&quot;use_divs&quot;</span><span class='o'>=&gt;</span><span class='kp'>false</span><span class='p'>,</span>
+   <span class='s2'>&quot;png_engine&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;blahtex&quot;</span><span class='p'>,</span>
+   <span class='s2'>&quot;png_dir&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;images/latex&quot;</span><span class='p'>,</span>
+   <span class='s2'>&quot;png_url&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;/images/latex&quot;</span>
+  <span class='p'>},</span>
+ <span class='s2'>&quot;rdiscount&quot;</span><span class='o'>=&gt;</span>
+  <span class='p'>{</span>
+    <span class='s2'>&quot;extensions&quot;</span><span class='o'>=&gt;[]</span>
+  <span class='p'>},</span>
+ <span class='s2'>&quot;redcarpet&quot;</span><span class='o'>=&gt;</span>
+  <span class='p'>{</span>
+    <span class='s2'>&quot;extensions&quot;</span><span class='o'>=&gt;[]</span>
+  <span class='p'>},</span>
+ <span class='s2'>&quot;kramdown&quot;</span><span class='o'>=&gt;</span>
+  <span class='p'>{</span>
+   <span class='s2'>&quot;auto_ids&quot;</span><span class='o'>=&gt;</span><span class='kp'>true</span><span class='p'>,</span>
+   <span class='s2'>&quot;footnote_nr&quot;</span><span class='o'>=&gt;</span><span class='mi'>1</span><span class='p'>,</span>
+   <span class='s2'>&quot;entity_output&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;as_char&quot;</span><span class='p'>,</span>
+   <span class='s2'>&quot;toc_levels&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;1..6&quot;</span><span class='p'>,</span>
+   <span class='s2'>&quot;use_coderay&quot;</span><span class='o'>=&gt;</span><span class='kp'>false</span><span class='p'>,</span>
+   <span class='s2'>&quot;coderay&quot;</span><span class='o'>=&gt;</span>
+    <span class='p'>{</span>
+     <span class='s2'>&quot;coderay_wrap&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;div&quot;</span><span class='p'>,</span>
+     <span class='s2'>&quot;coderay_line_numbers&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;inline&quot;</span><span class='p'>,</span>
+     <span class='s2'>&quot;coderay_line_number_start&quot;</span><span class='o'>=&gt;</span><span class='mi'>1</span><span class='p'>,</span>
+     <span class='s2'>&quot;coderay_tab_width&quot;</span><span class='o'>=&gt;</span><span class='mi'>4</span><span class='p'>,</span>
+     <span class='s2'>&quot;coderay_bold_every&quot;</span><span class='o'>=&gt;</span><span class='mi'>10</span><span class='p'>,</span>
+     <span class='s2'>&quot;coderay_css&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;style&quot;</span>
+    <span class='p'>}</span>
+  <span class='p'>},</span>
+ <span class='s2'>&quot;time&quot;</span><span class='o'>=&gt;</span><span class='mi'>2011</span><span class='o'>-</span><span class='mi'>12</span><span class='o'>-</span><span class='mi'>20</span> <span class='mi'>14</span><span class='p'>:</span><span class='mo'>03</span><span class='p'>:</span><span class='mi'>53</span> <span class='o'>-</span><span class='mi'>0800</span><span class='p'>,</span>
+ <span class='s2'>&quot;posts&quot;</span><span class='o'>=&gt;</span>
+  <span class='o'>[.</span><span class='n'>.</span><span class='o'>.</span><span class='p'>(</span><span class='nb'>Array</span> <span class='n'>of</span> <span class='n'>liquified</span> <span class='ss'>Jekyll</span><span class='p'>:</span><span class='ss'>:Post</span> <span class='n'>objects</span><span class='p'>)</span><span class='o'>.</span><span class='n'>.</span><span class='o'>.]</span><span class='p'>,</span>
+ <span class='s2'>&quot;pages&quot;</span><span class='o'>=&gt;</span>
+  <span class='o'>[.</span><span class='n'>.</span><span class='o'>.</span><span class='p'>(</span><span class='nb'>Array</span> <span class='n'>of</span> <span class='n'>liquified</span> <span class='ss'>Jekyll</span><span class='p'>:</span><span class='ss'>:Page</span> <span class='n'>objects</span><span class='p'>)</span><span class='o'>.</span><span class='n'>.</span><span class='o'>.]</span><span class='p'>,</span>
+ <span class='s2'>&quot;html_pages&quot;</span><span class='o'>=&gt;</span>
+  <span class='o'>[.</span><span class='n'>.</span><span class='o'>.</span><span class='p'>(</span><span class='nb'>Array</span> <span class='n'>of</span> <span class='n'>liquified</span> <span class='ss'>Jekyll</span><span class='p'>:</span><span class='ss'>:Page</span> <span class='n'>objects</span><span class='p'>)</span><span class='o'>.</span><span class='n'>.</span><span class='o'>.]</span><span class='p'>,</span>
+ <span class='s2'>&quot;categories&quot;</span><span class='o'>=&gt;</span>
+  <span class='p'>{</span><span class='s2'>&quot;examples&quot;</span><span class='o'>=&gt;</span>
+    <span class='o'>[.</span><span class='n'>.</span><span class='o'>.</span><span class='p'>(</span><span class='nb'>Array</span> <span class='n'>of</span> <span class='n'>liquified</span> <span class='ss'>Jekyll</span><span class='p'>:</span><span class='ss'>:Post</span> <span class='n'>objects</span><span class='p'>)</span><span class='o'>.</span><span class='n'>.</span><span class='o'>.]</span><span class='p'>,</span>
+   <span class='s2'>&quot;lessons&quot;</span><span class='o'>=&gt;</span>
+    <span class='o'>[.</span><span class='n'>.</span><span class='o'>.</span><span class='p'>(</span><span class='nb'>Array</span> <span class='n'>of</span> <span class='n'>liquified</span> <span class='ss'>Jekyll</span><span class='p'>:</span><span class='ss'>:Post</span> <span class='n'>objects</span><span class='p'>)</span><span class='o'>.</span><span class='n'>.</span><span class='o'>.]</span><span class='p'>,</span>
+ <span class='s2'>&quot;tags&quot;</span><span class='o'>=&gt;</span>
+  <span class='p'>{</span>
+   <span class='s2'>&quot;permalinks&quot;</span><span class='o'>=&gt;</span>
+    <span class='o'>[.</span><span class='n'>.</span><span class='o'>.</span><span class='p'>(</span><span class='nb'>Array</span> <span class='n'>of</span> <span class='n'>liquified</span> <span class='ss'>Jekyll</span><span class='p'>:</span><span class='ss'>:Post</span> <span class='n'>objects</span><span class='p'>)</span><span class='o'>.</span><span class='n'>.</span><span class='o'>.]</span><span class='p'>,</span>
+   <span class='s2'>&quot;urls&quot;</span><span class='o'>=&gt;</span>
+    <span class='o'>[.</span><span class='n'>.</span><span class='o'>.</span><span class='p'>(</span><span class='nb'>Array</span> <span class='n'>of</span> <span class='n'>liquified</span> <span class='ss'>Jekyll</span><span class='p'>:</span><span class='ss'>:Post</span> <span class='n'>objects</span><span class='p'>)</span><span class='o'>.</span><span class='n'>.</span><span class='o'>.]</span><span class='p'>,</span>
+   <span class='s2'>&quot;templating&quot;</span><span class='o'>=&gt;</span>
+    <span class='o'>[.</span><span class='n'>.</span><span class='o'>.</span><span class='p'>(</span><span class='nb'>Array</span> <span class='n'>of</span> <span class='n'>liquified</span> <span class='ss'>Jekyll</span><span class='p'>:</span><span class='ss'>:Post</span> <span class='n'>objects</span><span class='p'>)</span><span class='o'>.</span><span class='n'>.</span><span class='o'>.]</span><span class='p'>,</span>
+   <span class='s2'>&quot;liquid&quot;</span><span class='o'>=&gt;</span>
+    <span class='o'>[.</span><span class='n'>.</span><span class='o'>.</span><span class='p'>(</span><span class='nb'>Array</span> <span class='n'>of</span> <span class='n'>liquified</span> <span class='ss'>Jekyll</span><span class='p'>:</span><span class='ss'>:Post</span> <span class='n'>objects</span><span class='p'>)</span><span class='o'>.</span><span class='n'>.</span><span class='o'>.]</span><span class='p'>,</span>
+   <span class='s2'>&quot;posts&quot;</span><span class='o'>=&gt;</span>
+    <span class='o'>[.</span><span class='n'>.</span><span class='o'>.</span><span class='p'>(</span><span class='nb'>Array</span> <span class='n'>of</span> <span class='n'>liquified</span> <span class='ss'>Jekyll</span><span class='p'>:</span><span class='ss'>:Post</span> <span class='n'>objects</span><span class='p'>)</span><span class='o'>.</span><span class='n'>.</span><span class='o'>.]</span>
+  <span class='p'>}</span>
+<span class='p'>}</span>
+</code></pre></div>
+<h3 id='sitewide_custom_data'>Sitewide Custom Data</h3>
+
+<p>Set sitewide custom data using the config file.</p>
+
+<p>Variables held in the config file get merged into the site variable.</p>
+
+<h2 id='categories'>Categories</h2>
+
+<p>Categories may only be applied to posts and are available on a per-post basis as well as aggregated in a sitewide global variable, i.e. all categories available for the website.</p>
+
+<p>When iterating over categories the order is alpha descending</p>
+
+<h2 id='tags'>Tags</h2>
+
+<p>Tags may only be applied to posts and are available on a per-post basis as well as aggregated in a sitewide global variable, i.e. all tags available for the website.</p>
+
+<p>When iterating over tags the order is alpha descending.</p>
+					<div class="meta">
+						<p class="date-publish">
+							Published: 
+							<date class="date-pub" title="2011-11-30T00:00:00-08:00" datetime="2011-11-30T00:00:00-08:00" pubdate>
+							<span class="month"><abbr>November</abbr></span>
+							<span class="day">30</span>
+							<span class="year">2011</span>
+							</date>
+						</p>
+						<ul class="list-category list-linear">
+							<li class="list-head">category: </li>
+							
+							
+
+
+  
+     
+    	<li><a href="/categories.html#api-ref">
+    		api <span>4</span>
+    	</a></li>
+    
+  
+
+
+						</ul>
+						<ul class="list-tag list-linear">
+							<li class="list-head">tags: </li>
+							
+							
+
+
+  
+     
+    	<li><a href="/tags.html#learn-ref">learn <span>3</span></a></li>
+     
+    	<li><a href="/tags.html#templating-ref">templating <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#liquid-ref">liquid <span>1</span></a></li>
+    
+  
+
+
+
+						</ul>
+					</div><!-- meta -->
+				</div><!-- entry-content -->
+				<div class="misc-content">
+					<div class="social">
+						<ul class="list-linear">
+							<li><div class="twitter-tweet"><a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="@ORURISAYP" data-lang="en">Tweet</a></div></li>
+							<li><div class="twitter-follow"><a href="https://twitter.com/@ORURISAYP" class="twitter-follow-button" data-show-count="false" data-lang="en"></a></div></li>
+						</ul>
+					</div>
+					
+					
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+				</div><!-- misc-content -->
+				
+			</div><!-- bd -->
+			<footer class="unit-foot">
+				<div class="unit-inner unit-foot-inner">
+					<nav class="pagination">
+						<ul>
+							
+							<li class="prev"><a class="internal" rel="prev"  href="/api/2011/11/29/jekyll-liquid-api" title="View Jekyll Liquid Api">&laquo; Jekyll Liquid Api</a></li>
+							
+							
+							<li class="pipe"> | </li>
+							
+							
+							<li class="next"><a class="internal" rel="next"  href="/lessons/2011/12/29/jekyll-introduction" title="View Jekyll Introduction">Jekyll Introduction &raquo;</a></li>
+							
+						</ul>
+					</nav>
+					<p class="gotop">
+						<a href="#page">Back to Top</a>
+					</p>
+				</div>
+			</footer>
+
+		</div><!-- content -->
+	</div><!-- unit-inner -->
+</article>
+
+
+				</div>
+			</div><!-- unit-inner -->
+		</div><!-- unit-body -->
+	</div><!-- body -->
+	<footer class="the-footer">
+		<div class="unit-foot">
+			<div class="unit-inner unit-foot-inner">
+				<div class="misc vcard">
+					<h4>about</h4>
+					<ul>
+						<li class="contact"><address><span class="author fn n">Mele Sax-Barnett and Lyzi Diamond</span> - <span class="fn email">saxbarm@gmail.com</span></address></li>
+						<li class="github"><a href="http://github.com/pdxmele / lyzidiamond/" rel="me">github.com/pdxmele / lyzidiamond</a></li>
+						<li class="twitter"><a href="http://twitter.com/@ORURISAYP/" rel="me">twitter.com/@ORURISAYP</a></li>
+						<li class="rss"><a href="http://feeds.feedburner.com/">Subscribe to RSS Feed</a></li>
+					</ul>
+				</div><!-- misc -->
+				<p class="licence">
+					Theme: <a href="http://layouts-the.me">the_minimum</a> based on <a href="http://jekyllbootstrap.com/">Jekyll-bootstrap</a>.<br>
+					Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>.
+				</p>
+			</div><!-- unit-foot-inner -->
+		</div><!-- unit-foot -->
+	</footer>
+</div><!-- page -->
+<script>
+	(function(d, s) {
+		var js, fjs = d.getElementsByTagName(s)[0], load = function(url, id) {
+		if (d.getElementById(id)) {return;}
+		js = d.createElement(s); js.src = url; js.id = id;
+		fjs.parentNode.insertBefore(js, fjs);
+		};
+	load('//platform.twitter.com/widgets.js', 'tweetjs');
+	// load('https://apis.google.com/js/plusone.js', 'gplus1js'); // Checkout http://j.mp/ApDgMr for usage html for this is <div class="g-plusone" data-size="medium"></div>
+	// load('//connect.facebook.net/en_US/all.js#xfbml=1', 'fbjssdk'); // Checkout http://j.mp/wZw2xR for using open graph protorol html for this is <div class="fb-like" data-href="/api/2011/11/30/template-data-api" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
+	}(document, 'script'));
+</script>
+<script>
+/*! A fix for the iOS orientationchange zoom bug.Script by @scottjehl, rebound by @wilto. MIT License.*/
+(function(j){var i=j.document;if(!i.querySelectorAll){return}var l=i.querySelectorAll("meta[name=viewport]")[0],a=l&&l.getAttribute("content"),h=a+", maximum-scale=1.0",d=a+", maximum-scale=10.0",g=true,c=j.orientation,k=0;if(!l){return}function f(){l.setAttribute("content",d);g=true}function b(){l.setAttribute("content",h);g=false}function e(m){c=Math.abs(j.orientation);k=Math.abs(m.gamma);if(k>8&&c===0){if(g){b()}}else{if(!g){f()}}}j.addEventListener("orientationchange",f,false);j.addEventListener("deviceorientation",e,false)})(this);
+</script>
+
+  
+</body>
+</html>
+
