@@ -47,7 +47,8 @@
                 |-- style.css
             |-- images
                 |-- smileyface.png
-</code></pre></div>
+</code></pre>
+</div>
 <p>All themes are name-spaced to avoid conflicting with other theme files. As shown, a theme needs two main but separate directory components:</p>
 
 <ol>
@@ -143,10 +144,12 @@
 
 <p>Once your theme is looking good, you&#8217;ll need to package it as a <strong>Theme Package</strong>. Assuming you followed all the directions and have a valid directory structure:</p>
 <div class='highlight'><pre><code class='bash'><span class='nv'>$ </span>rake theme:package <span class='nv'>name</span><span class='o'>=</span><span class='s2'>&quot;THEME-NAME&quot;</span>
-</code></pre></div>
+</code></pre>
+</div>
 <p>This will create a folder at:</p>
 <div class='highlight'><pre><code class='text'>./_theme_packages/THEME-NAME
-</code></pre></div>
+</code></pre>
+</div>
 <p>The contents of this folder is 1:1 file matching plus a <code>packager.yml</code> detailing information about the packaging method.</p>
 
 <h3 id='manifestyml'>manifest.yml</h3>
@@ -160,7 +163,8 @@
   <span class='l-Scalar-Plain'>name</span> <span class='p-Indicator'>:</span> <span class='s'>&quot;Yuya</span><span class='nv'> </span><span class='s'>Saito&quot;</span>
   <span class='l-Scalar-Plain'>email</span> <span class='p-Indicator'>:</span> <span class='s'>&quot;cssradar@gmail.com&quot;</span>
   <span class='l-Scalar-Plain'>website</span> <span class='p-Indicator'>:</span> <span class='s'>&quot;http://css.studiomohawk.com/&quot;</span>
-</code></pre></div>
+</code></pre>
+</div>
 <h3 id='readmemd'>README.md</h3>
 
 <p>Additionally you may include a readme file with instructions specific to your theme as well as any credits or information you want to pass along.</p>

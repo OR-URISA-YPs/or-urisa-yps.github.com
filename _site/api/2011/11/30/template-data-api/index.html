@@ -28,22 +28,23 @@
 <h2 id='global_pagepost_data'>Global Page/Post Data</h2>
 
 <p>Every content file that Jekyll processes is either a page or a post. In both cases the data relative to the specific page or post being rendered within the template is accessible through the <code>page</code> variable. The page variable is a globally accessible variable available to all templates, posts, pages, and includes being rendered for the given post/page instance.</p>
-<div class='highlight'><pre><code class='ruby'><span class='c1'># The following format represents a Jekyll::Post or Jekyll::Page object. </span>
-<span class='c1'># Jekyll::Post and Jekyll::Page objects may be nested in other variables in which case you can expect this same format:</span>
-<span class='n'>page</span> <span class='o'>=</span> <span class='p'>{</span>
- <span class='s2'>&quot;layout&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;post&quot;</span><span class='p'>,</span>
- <span class='s2'>&quot;categories&quot;</span><span class='o'>=&gt;[</span><span class='s2'>&quot;lessons&quot;</span><span class='o'>]</span><span class='p'>,</span>
- <span class='s2'>&quot;title&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;Jekyll Liquid Api&quot;</span><span class='p'>,</span>
- <span class='s2'>&quot;url&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;/lessons/jekyll-liquid-api.html&quot;</span><span class='p'>,</span>
- <span class='s2'>&quot;date&quot;</span><span class='o'>=&gt;</span><span class='mi'>2011</span><span class='o'>-</span><span class='mo'>01</span><span class='o'>-</span><span class='mi'>27</span> <span class='mo'>00</span><span class='p'>:</span><span class='mo'>00</span><span class='p'>:</span><span class='mo'>00</span> <span class='o'>-</span><span class='mi'>0800</span><span class='p'>,</span>
- <span class='s2'>&quot;id&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;/lessons/jekyll-liquid-api&quot;</span><span class='p'>,</span>
- <span class='s2'>&quot;next&quot;</span><span class='o'>=&gt;</span> <span class='c1'>#Jekyll:Post @id=&quot;/lessons/template-data-api&quot;,</span>
- <span class='s2'>&quot;previous&quot;</span><span class='o'>=&gt;</span> <span class='c1'>#Jekyll:Post @id=&quot;/lessons/configuring-urls&quot;,</span>
- <span class='s2'>&quot;tags&quot;</span><span class='o'>=&gt;[</span><span class='s2'>&quot;tagname1&quot;</span><span class='p'>,</span> <span class='s2'>&quot;tagname2&quot;</span><span class='o'>]</span><span class='p'>,</span>
- <span class='s2'>&quot;custom_variable&quot;</span><span class='o'>=&gt;</span> <span class='o'>[</span><span class='s2'>&quot;a&quot;</span><span class='p'>,</span> <span class='s2'>&quot;custom&quot;</span><span class='p'>,</span> <span class='s2'>&quot;defined&quot;</span><span class='p'>,</span> <span class='s2'>&quot;data-structure&quot;</span><span class='o'>]</span><span class='p'>,</span>
- <span class='s2'>&quot;content&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;... this is the unparsed raw html page/post content ...&quot;</span>
-<span class='p'>}</span>
-</code></pre></div>
+<div class='highlight'><pre><code class='ruby'><span class='lineno'> 1</span> <span class='c1'># The following format represents a Jekyll::Post or Jekyll::Page object. </span>
+<span class='lineno'> 2</span> <span class='c1'># Jekyll::Post and Jekyll::Page objects may be nested in other variables in which case you can expect this same format:</span>
+<span class='lineno'> 3</span> <span class='n'>page</span> <span class='o'>=</span> <span class='p'>{</span>
+<span class='lineno'> 4</span>  <span class='s2'>&quot;layout&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;post&quot;</span><span class='p'>,</span>
+<span class='lineno'> 5</span>  <span class='s2'>&quot;categories&quot;</span><span class='o'>=&gt;[</span><span class='s2'>&quot;lessons&quot;</span><span class='o'>]</span><span class='p'>,</span>
+<span class='lineno'> 6</span>  <span class='s2'>&quot;title&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;Jekyll Liquid Api&quot;</span><span class='p'>,</span>
+<span class='lineno'> 7</span>  <span class='s2'>&quot;url&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;/lessons/jekyll-liquid-api.html&quot;</span><span class='p'>,</span>
+<span class='lineno'> 8</span>  <span class='s2'>&quot;date&quot;</span><span class='o'>=&gt;</span><span class='mi'>2011</span><span class='o'>-</span><span class='mo'>01</span><span class='o'>-</span><span class='mi'>27</span> <span class='mo'>00</span><span class='p'>:</span><span class='mo'>00</span><span class='p'>:</span><span class='mo'>00</span> <span class='o'>-</span><span class='mi'>0800</span><span class='p'>,</span>
+<span class='lineno'> 9</span>  <span class='s2'>&quot;id&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;/lessons/jekyll-liquid-api&quot;</span><span class='p'>,</span>
+<span class='lineno'>10</span>  <span class='s2'>&quot;next&quot;</span><span class='o'>=&gt;</span> <span class='c1'>#Jekyll:Post @id=&quot;/lessons/template-data-api&quot;,</span>
+<span class='lineno'>11</span>  <span class='s2'>&quot;previous&quot;</span><span class='o'>=&gt;</span> <span class='c1'>#Jekyll:Post @id=&quot;/lessons/configuring-urls&quot;,</span>
+<span class='lineno'>12</span>  <span class='s2'>&quot;tags&quot;</span><span class='o'>=&gt;[</span><span class='s2'>&quot;tagname1&quot;</span><span class='p'>,</span> <span class='s2'>&quot;tagname2&quot;</span><span class='o'>]</span><span class='p'>,</span>
+<span class='lineno'>13</span>  <span class='s2'>&quot;custom_variable&quot;</span><span class='o'>=&gt;</span> <span class='o'>[</span><span class='s2'>&quot;a&quot;</span><span class='p'>,</span> <span class='s2'>&quot;custom&quot;</span><span class='p'>,</span> <span class='s2'>&quot;defined&quot;</span><span class='p'>,</span> <span class='s2'>&quot;data-structure&quot;</span><span class='o'>]</span><span class='p'>,</span>
+<span class='lineno'>14</span>  <span class='s2'>&quot;content&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;... this is the unparsed raw html page/post content ...&quot;</span>
+<span class='lineno'>15</span> <span class='p'>}</span>
+</code></pre>
+</div>
 <h3 id='setting_custom_data'>Setting Custom Data</h3>
 
 <p>You can set custom variables through the post or page Yaml Front matter and they will be included in the page hash.</p>
@@ -69,83 +70,84 @@
 <h2 id='global_site_data'>Global Site Data</h2>
 
 <p>This data is available anywhere liquid is available. This includes templates, posts, pages, and includes.</p>
-<div class='highlight'><pre><code class='ruby'><span class='n'>site</span> <span class='o'>=</span> <span class='p'>{</span>
-  <span class='s2'>&quot;related_posts&quot;</span><span class='o'>=&gt;</span>
-    <span class='o'>[.</span><span class='n'>.</span><span class='o'>.</span><span class='p'>(</span><span class='nb'>Array</span> <span class='n'>of</span> <span class='n'>liquified</span> <span class='ss'>Jekyll</span><span class='p'>:</span><span class='ss'>:Post</span> <span class='n'>objects</span><span class='p'>)</span><span class='o'>.</span><span class='n'>.</span><span class='o'>.]</span><span class='p'>,</span>
- <span class='s2'>&quot;safe&quot;</span><span class='o'>=&gt;</span><span class='kp'>false</span><span class='p'>,</span>
- <span class='s2'>&quot;auto&quot;</span><span class='o'>=&gt;</span><span class='kp'>true</span><span class='p'>,</span>
- <span class='s2'>&quot;server&quot;</span><span class='o'>=&gt;</span><span class='kp'>true</span><span class='p'>,</span>
- <span class='s2'>&quot;server_port&quot;</span><span class='o'>=&gt;</span><span class='mi'>4000</span><span class='p'>,</span>
- <span class='s2'>&quot;source&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;/Users/jade/Dropbox/github/jekyll-bootstrap&quot;</span><span class='p'>,</span>
- <span class='s2'>&quot;destination&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;/Users/jade/Dropbox/github/jekyll-bootstrap/_site&quot;</span><span class='p'>,</span>
- <span class='s2'>&quot;plugins&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;/Users/jade/Dropbox/github/jekyll-bootstrap/_plugins&quot;</span><span class='p'>,</span>
- <span class='s2'>&quot;future&quot;</span><span class='o'>=&gt;</span><span class='kp'>true</span><span class='p'>,</span>
- <span class='s2'>&quot;lsi&quot;</span><span class='o'>=&gt;</span><span class='kp'>false</span><span class='p'>,</span>
- <span class='s2'>&quot;pygments&quot;</span><span class='o'>=&gt;</span><span class='kp'>false</span><span class='p'>,</span>
- <span class='s2'>&quot;markdown&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;maruku&quot;</span><span class='p'>,</span>
- <span class='s2'>&quot;permalink&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;/:categories/:title.html&quot;</span><span class='p'>,</span>
- <span class='s2'>&quot;markdown_ext&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;markdown,mkd,mkdn,md&quot;</span><span class='p'>,</span>
- <span class='s2'>&quot;textile_ext&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;textile&quot;</span><span class='p'>,</span>
- <span class='s2'>&quot;maruku&quot;</span><span class='o'>=&gt;</span>
-  <span class='p'>{</span>
-   <span class='s2'>&quot;use_tex&quot;</span><span class='o'>=&gt;</span><span class='kp'>false</span><span class='p'>,</span>
-   <span class='s2'>&quot;use_divs&quot;</span><span class='o'>=&gt;</span><span class='kp'>false</span><span class='p'>,</span>
-   <span class='s2'>&quot;png_engine&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;blahtex&quot;</span><span class='p'>,</span>
-   <span class='s2'>&quot;png_dir&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;images/latex&quot;</span><span class='p'>,</span>
-   <span class='s2'>&quot;png_url&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;/images/latex&quot;</span>
-  <span class='p'>},</span>
- <span class='s2'>&quot;rdiscount&quot;</span><span class='o'>=&gt;</span>
-  <span class='p'>{</span>
-    <span class='s2'>&quot;extensions&quot;</span><span class='o'>=&gt;[]</span>
-  <span class='p'>},</span>
- <span class='s2'>&quot;redcarpet&quot;</span><span class='o'>=&gt;</span>
-  <span class='p'>{</span>
-    <span class='s2'>&quot;extensions&quot;</span><span class='o'>=&gt;[]</span>
-  <span class='p'>},</span>
- <span class='s2'>&quot;kramdown&quot;</span><span class='o'>=&gt;</span>
-  <span class='p'>{</span>
-   <span class='s2'>&quot;auto_ids&quot;</span><span class='o'>=&gt;</span><span class='kp'>true</span><span class='p'>,</span>
-   <span class='s2'>&quot;footnote_nr&quot;</span><span class='o'>=&gt;</span><span class='mi'>1</span><span class='p'>,</span>
-   <span class='s2'>&quot;entity_output&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;as_char&quot;</span><span class='p'>,</span>
-   <span class='s2'>&quot;toc_levels&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;1..6&quot;</span><span class='p'>,</span>
-   <span class='s2'>&quot;use_coderay&quot;</span><span class='o'>=&gt;</span><span class='kp'>false</span><span class='p'>,</span>
-   <span class='s2'>&quot;coderay&quot;</span><span class='o'>=&gt;</span>
-    <span class='p'>{</span>
-     <span class='s2'>&quot;coderay_wrap&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;div&quot;</span><span class='p'>,</span>
-     <span class='s2'>&quot;coderay_line_numbers&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;inline&quot;</span><span class='p'>,</span>
-     <span class='s2'>&quot;coderay_line_number_start&quot;</span><span class='o'>=&gt;</span><span class='mi'>1</span><span class='p'>,</span>
-     <span class='s2'>&quot;coderay_tab_width&quot;</span><span class='o'>=&gt;</span><span class='mi'>4</span><span class='p'>,</span>
-     <span class='s2'>&quot;coderay_bold_every&quot;</span><span class='o'>=&gt;</span><span class='mi'>10</span><span class='p'>,</span>
-     <span class='s2'>&quot;coderay_css&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;style&quot;</span>
-    <span class='p'>}</span>
-  <span class='p'>},</span>
- <span class='s2'>&quot;time&quot;</span><span class='o'>=&gt;</span><span class='mi'>2011</span><span class='o'>-</span><span class='mi'>12</span><span class='o'>-</span><span class='mi'>20</span> <span class='mi'>14</span><span class='p'>:</span><span class='mo'>03</span><span class='p'>:</span><span class='mi'>53</span> <span class='o'>-</span><span class='mi'>0800</span><span class='p'>,</span>
- <span class='s2'>&quot;posts&quot;</span><span class='o'>=&gt;</span>
-  <span class='o'>[.</span><span class='n'>.</span><span class='o'>.</span><span class='p'>(</span><span class='nb'>Array</span> <span class='n'>of</span> <span class='n'>liquified</span> <span class='ss'>Jekyll</span><span class='p'>:</span><span class='ss'>:Post</span> <span class='n'>objects</span><span class='p'>)</span><span class='o'>.</span><span class='n'>.</span><span class='o'>.]</span><span class='p'>,</span>
- <span class='s2'>&quot;pages&quot;</span><span class='o'>=&gt;</span>
-  <span class='o'>[.</span><span class='n'>.</span><span class='o'>.</span><span class='p'>(</span><span class='nb'>Array</span> <span class='n'>of</span> <span class='n'>liquified</span> <span class='ss'>Jekyll</span><span class='p'>:</span><span class='ss'>:Page</span> <span class='n'>objects</span><span class='p'>)</span><span class='o'>.</span><span class='n'>.</span><span class='o'>.]</span><span class='p'>,</span>
- <span class='s2'>&quot;html_pages&quot;</span><span class='o'>=&gt;</span>
-  <span class='o'>[.</span><span class='n'>.</span><span class='o'>.</span><span class='p'>(</span><span class='nb'>Array</span> <span class='n'>of</span> <span class='n'>liquified</span> <span class='ss'>Jekyll</span><span class='p'>:</span><span class='ss'>:Page</span> <span class='n'>objects</span><span class='p'>)</span><span class='o'>.</span><span class='n'>.</span><span class='o'>.]</span><span class='p'>,</span>
- <span class='s2'>&quot;categories&quot;</span><span class='o'>=&gt;</span>
-  <span class='p'>{</span><span class='s2'>&quot;examples&quot;</span><span class='o'>=&gt;</span>
-    <span class='o'>[.</span><span class='n'>.</span><span class='o'>.</span><span class='p'>(</span><span class='nb'>Array</span> <span class='n'>of</span> <span class='n'>liquified</span> <span class='ss'>Jekyll</span><span class='p'>:</span><span class='ss'>:Post</span> <span class='n'>objects</span><span class='p'>)</span><span class='o'>.</span><span class='n'>.</span><span class='o'>.]</span><span class='p'>,</span>
-   <span class='s2'>&quot;lessons&quot;</span><span class='o'>=&gt;</span>
-    <span class='o'>[.</span><span class='n'>.</span><span class='o'>.</span><span class='p'>(</span><span class='nb'>Array</span> <span class='n'>of</span> <span class='n'>liquified</span> <span class='ss'>Jekyll</span><span class='p'>:</span><span class='ss'>:Post</span> <span class='n'>objects</span><span class='p'>)</span><span class='o'>.</span><span class='n'>.</span><span class='o'>.]</span><span class='p'>,</span>
- <span class='s2'>&quot;tags&quot;</span><span class='o'>=&gt;</span>
-  <span class='p'>{</span>
-   <span class='s2'>&quot;permalinks&quot;</span><span class='o'>=&gt;</span>
-    <span class='o'>[.</span><span class='n'>.</span><span class='o'>.</span><span class='p'>(</span><span class='nb'>Array</span> <span class='n'>of</span> <span class='n'>liquified</span> <span class='ss'>Jekyll</span><span class='p'>:</span><span class='ss'>:Post</span> <span class='n'>objects</span><span class='p'>)</span><span class='o'>.</span><span class='n'>.</span><span class='o'>.]</span><span class='p'>,</span>
-   <span class='s2'>&quot;urls&quot;</span><span class='o'>=&gt;</span>
-    <span class='o'>[.</span><span class='n'>.</span><span class='o'>.</span><span class='p'>(</span><span class='nb'>Array</span> <span class='n'>of</span> <span class='n'>liquified</span> <span class='ss'>Jekyll</span><span class='p'>:</span><span class='ss'>:Post</span> <span class='n'>objects</span><span class='p'>)</span><span class='o'>.</span><span class='n'>.</span><span class='o'>.]</span><span class='p'>,</span>
-   <span class='s2'>&quot;templating&quot;</span><span class='o'>=&gt;</span>
-    <span class='o'>[.</span><span class='n'>.</span><span class='o'>.</span><span class='p'>(</span><span class='nb'>Array</span> <span class='n'>of</span> <span class='n'>liquified</span> <span class='ss'>Jekyll</span><span class='p'>:</span><span class='ss'>:Post</span> <span class='n'>objects</span><span class='p'>)</span><span class='o'>.</span><span class='n'>.</span><span class='o'>.]</span><span class='p'>,</span>
-   <span class='s2'>&quot;liquid&quot;</span><span class='o'>=&gt;</span>
-    <span class='o'>[.</span><span class='n'>.</span><span class='o'>.</span><span class='p'>(</span><span class='nb'>Array</span> <span class='n'>of</span> <span class='n'>liquified</span> <span class='ss'>Jekyll</span><span class='p'>:</span><span class='ss'>:Post</span> <span class='n'>objects</span><span class='p'>)</span><span class='o'>.</span><span class='n'>.</span><span class='o'>.]</span><span class='p'>,</span>
-   <span class='s2'>&quot;posts&quot;</span><span class='o'>=&gt;</span>
-    <span class='o'>[.</span><span class='n'>.</span><span class='o'>.</span><span class='p'>(</span><span class='nb'>Array</span> <span class='n'>of</span> <span class='n'>liquified</span> <span class='ss'>Jekyll</span><span class='p'>:</span><span class='ss'>:Post</span> <span class='n'>objects</span><span class='p'>)</span><span class='o'>.</span><span class='n'>.</span><span class='o'>.]</span>
-  <span class='p'>}</span>
-<span class='p'>}</span>
-</code></pre></div>
+<div class='highlight'><pre><code class='ruby'><span class='lineno'> 1</span> <span class='n'>site</span> <span class='o'>=</span> <span class='p'>{</span>
+<span class='lineno'> 2</span>   <span class='s2'>&quot;related_posts&quot;</span><span class='o'>=&gt;</span>
+<span class='lineno'> 3</span>     <span class='o'>[.</span><span class='n'>.</span><span class='o'>.</span><span class='p'>(</span><span class='nb'>Array</span> <span class='n'>of</span> <span class='n'>liquified</span> <span class='no'>Jekyll</span><span class='o'>::</span><span class='no'>Post</span> <span class='n'>objects</span><span class='p'>)</span><span class='o'>.</span><span class='n'>.</span><span class='o'>.]</span><span class='p'>,</span>
+<span class='lineno'> 4</span>  <span class='s2'>&quot;safe&quot;</span><span class='o'>=&gt;</span><span class='kp'>false</span><span class='p'>,</span>
+<span class='lineno'> 5</span>  <span class='s2'>&quot;auto&quot;</span><span class='o'>=&gt;</span><span class='kp'>true</span><span class='p'>,</span>
+<span class='lineno'> 6</span>  <span class='s2'>&quot;server&quot;</span><span class='o'>=&gt;</span><span class='kp'>true</span><span class='p'>,</span>
+<span class='lineno'> 7</span>  <span class='s2'>&quot;server_port&quot;</span><span class='o'>=&gt;</span><span class='mi'>4000</span><span class='p'>,</span>
+<span class='lineno'> 8</span>  <span class='s2'>&quot;source&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;/Users/jade/Dropbox/github/jekyll-bootstrap&quot;</span><span class='p'>,</span>
+<span class='lineno'> 9</span>  <span class='s2'>&quot;destination&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;/Users/jade/Dropbox/github/jekyll-bootstrap/_site&quot;</span><span class='p'>,</span>
+<span class='lineno'>10</span>  <span class='s2'>&quot;plugins&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;/Users/jade/Dropbox/github/jekyll-bootstrap/_plugins&quot;</span><span class='p'>,</span>
+<span class='lineno'>11</span>  <span class='s2'>&quot;future&quot;</span><span class='o'>=&gt;</span><span class='kp'>true</span><span class='p'>,</span>
+<span class='lineno'>12</span>  <span class='s2'>&quot;lsi&quot;</span><span class='o'>=&gt;</span><span class='kp'>false</span><span class='p'>,</span>
+<span class='lineno'>13</span>  <span class='s2'>&quot;pygments&quot;</span><span class='o'>=&gt;</span><span class='kp'>false</span><span class='p'>,</span>
+<span class='lineno'>14</span>  <span class='s2'>&quot;markdown&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;maruku&quot;</span><span class='p'>,</span>
+<span class='lineno'>15</span>  <span class='s2'>&quot;permalink&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;/:categories/:title.html&quot;</span><span class='p'>,</span>
+<span class='lineno'>16</span>  <span class='s2'>&quot;markdown_ext&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;markdown,mkd,mkdn,md&quot;</span><span class='p'>,</span>
+<span class='lineno'>17</span>  <span class='s2'>&quot;textile_ext&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;textile&quot;</span><span class='p'>,</span>
+<span class='lineno'>18</span>  <span class='s2'>&quot;maruku&quot;</span><span class='o'>=&gt;</span>
+<span class='lineno'>19</span>   <span class='p'>{</span>
+<span class='lineno'>20</span>    <span class='s2'>&quot;use_tex&quot;</span><span class='o'>=&gt;</span><span class='kp'>false</span><span class='p'>,</span>
+<span class='lineno'>21</span>    <span class='s2'>&quot;use_divs&quot;</span><span class='o'>=&gt;</span><span class='kp'>false</span><span class='p'>,</span>
+<span class='lineno'>22</span>    <span class='s2'>&quot;png_engine&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;blahtex&quot;</span><span class='p'>,</span>
+<span class='lineno'>23</span>    <span class='s2'>&quot;png_dir&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;images/latex&quot;</span><span class='p'>,</span>
+<span class='lineno'>24</span>    <span class='s2'>&quot;png_url&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;/images/latex&quot;</span>
+<span class='lineno'>25</span>   <span class='p'>},</span>
+<span class='lineno'>26</span>  <span class='s2'>&quot;rdiscount&quot;</span><span class='o'>=&gt;</span>
+<span class='lineno'>27</span>   <span class='p'>{</span>
+<span class='lineno'>28</span>     <span class='s2'>&quot;extensions&quot;</span><span class='o'>=&gt;[]</span>
+<span class='lineno'>29</span>   <span class='p'>},</span>
+<span class='lineno'>30</span>  <span class='s2'>&quot;redcarpet&quot;</span><span class='o'>=&gt;</span>
+<span class='lineno'>31</span>   <span class='p'>{</span>
+<span class='lineno'>32</span>     <span class='s2'>&quot;extensions&quot;</span><span class='o'>=&gt;[]</span>
+<span class='lineno'>33</span>   <span class='p'>},</span>
+<span class='lineno'>34</span>  <span class='s2'>&quot;kramdown&quot;</span><span class='o'>=&gt;</span>
+<span class='lineno'>35</span>   <span class='p'>{</span>
+<span class='lineno'>36</span>    <span class='s2'>&quot;auto_ids&quot;</span><span class='o'>=&gt;</span><span class='kp'>true</span><span class='p'>,</span>
+<span class='lineno'>37</span>    <span class='s2'>&quot;footnote_nr&quot;</span><span class='o'>=&gt;</span><span class='mi'>1</span><span class='p'>,</span>
+<span class='lineno'>38</span>    <span class='s2'>&quot;entity_output&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;as_char&quot;</span><span class='p'>,</span>
+<span class='lineno'>39</span>    <span class='s2'>&quot;toc_levels&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;1..6&quot;</span><span class='p'>,</span>
+<span class='lineno'>40</span>    <span class='s2'>&quot;use_coderay&quot;</span><span class='o'>=&gt;</span><span class='kp'>false</span><span class='p'>,</span>
+<span class='lineno'>41</span>    <span class='s2'>&quot;coderay&quot;</span><span class='o'>=&gt;</span>
+<span class='lineno'>42</span>     <span class='p'>{</span>
+<span class='lineno'>43</span>      <span class='s2'>&quot;coderay_wrap&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;div&quot;</span><span class='p'>,</span>
+<span class='lineno'>44</span>      <span class='s2'>&quot;coderay_line_numbers&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;inline&quot;</span><span class='p'>,</span>
+<span class='lineno'>45</span>      <span class='s2'>&quot;coderay_line_number_start&quot;</span><span class='o'>=&gt;</span><span class='mi'>1</span><span class='p'>,</span>
+<span class='lineno'>46</span>      <span class='s2'>&quot;coderay_tab_width&quot;</span><span class='o'>=&gt;</span><span class='mi'>4</span><span class='p'>,</span>
+<span class='lineno'>47</span>      <span class='s2'>&quot;coderay_bold_every&quot;</span><span class='o'>=&gt;</span><span class='mi'>10</span><span class='p'>,</span>
+<span class='lineno'>48</span>      <span class='s2'>&quot;coderay_css&quot;</span><span class='o'>=&gt;</span><span class='s2'>&quot;style&quot;</span>
+<span class='lineno'>49</span>     <span class='p'>}</span>
+<span class='lineno'>50</span>   <span class='p'>},</span>
+<span class='lineno'>51</span>  <span class='s2'>&quot;time&quot;</span><span class='o'>=&gt;</span><span class='mi'>2011</span><span class='o'>-</span><span class='mi'>12</span><span class='o'>-</span><span class='mi'>20</span> <span class='mi'>14</span><span class='p'>:</span><span class='mo'>03</span><span class='p'>:</span><span class='mi'>53</span> <span class='o'>-</span><span class='mi'>0800</span><span class='p'>,</span>
+<span class='lineno'>52</span>  <span class='s2'>&quot;posts&quot;</span><span class='o'>=&gt;</span>
+<span class='lineno'>53</span>   <span class='o'>[.</span><span class='n'>.</span><span class='o'>.</span><span class='p'>(</span><span class='nb'>Array</span> <span class='n'>of</span> <span class='n'>liquified</span> <span class='no'>Jekyll</span><span class='o'>::</span><span class='no'>Post</span> <span class='n'>objects</span><span class='p'>)</span><span class='o'>.</span><span class='n'>.</span><span class='o'>.]</span><span class='p'>,</span>
+<span class='lineno'>54</span>  <span class='s2'>&quot;pages&quot;</span><span class='o'>=&gt;</span>
+<span class='lineno'>55</span>   <span class='o'>[.</span><span class='n'>.</span><span class='o'>.</span><span class='p'>(</span><span class='nb'>Array</span> <span class='n'>of</span> <span class='n'>liquified</span> <span class='no'>Jekyll</span><span class='o'>::</span><span class='no'>Page</span> <span class='n'>objects</span><span class='p'>)</span><span class='o'>.</span><span class='n'>.</span><span class='o'>.]</span><span class='p'>,</span>
+<span class='lineno'>56</span>  <span class='s2'>&quot;html_pages&quot;</span><span class='o'>=&gt;</span>
+<span class='lineno'>57</span>   <span class='o'>[.</span><span class='n'>.</span><span class='o'>.</span><span class='p'>(</span><span class='nb'>Array</span> <span class='n'>of</span> <span class='n'>liquified</span> <span class='no'>Jekyll</span><span class='o'>::</span><span class='no'>Page</span> <span class='n'>objects</span><span class='p'>)</span><span class='o'>.</span><span class='n'>.</span><span class='o'>.]</span><span class='p'>,</span>
+<span class='lineno'>58</span>  <span class='s2'>&quot;categories&quot;</span><span class='o'>=&gt;</span>
+<span class='lineno'>59</span>   <span class='p'>{</span><span class='s2'>&quot;examples&quot;</span><span class='o'>=&gt;</span>
+<span class='lineno'>60</span>     <span class='o'>[.</span><span class='n'>.</span><span class='o'>.</span><span class='p'>(</span><span class='nb'>Array</span> <span class='n'>of</span> <span class='n'>liquified</span> <span class='no'>Jekyll</span><span class='o'>::</span><span class='no'>Post</span> <span class='n'>objects</span><span class='p'>)</span><span class='o'>.</span><span class='n'>.</span><span class='o'>.]</span><span class='p'>,</span>
+<span class='lineno'>61</span>    <span class='s2'>&quot;lessons&quot;</span><span class='o'>=&gt;</span>
+<span class='lineno'>62</span>     <span class='o'>[.</span><span class='n'>.</span><span class='o'>.</span><span class='p'>(</span><span class='nb'>Array</span> <span class='n'>of</span> <span class='n'>liquified</span> <span class='no'>Jekyll</span><span class='o'>::</span><span class='no'>Post</span> <span class='n'>objects</span><span class='p'>)</span><span class='o'>.</span><span class='n'>.</span><span class='o'>.]</span><span class='p'>,</span>
+<span class='lineno'>63</span>  <span class='s2'>&quot;tags&quot;</span><span class='o'>=&gt;</span>
+<span class='lineno'>64</span>   <span class='p'>{</span>
+<span class='lineno'>65</span>    <span class='s2'>&quot;permalinks&quot;</span><span class='o'>=&gt;</span>
+<span class='lineno'>66</span>     <span class='o'>[.</span><span class='n'>.</span><span class='o'>.</span><span class='p'>(</span><span class='nb'>Array</span> <span class='n'>of</span> <span class='n'>liquified</span> <span class='no'>Jekyll</span><span class='o'>::</span><span class='no'>Post</span> <span class='n'>objects</span><span class='p'>)</span><span class='o'>.</span><span class='n'>.</span><span class='o'>.]</span><span class='p'>,</span>
+<span class='lineno'>67</span>    <span class='s2'>&quot;urls&quot;</span><span class='o'>=&gt;</span>
+<span class='lineno'>68</span>     <span class='o'>[.</span><span class='n'>.</span><span class='o'>.</span><span class='p'>(</span><span class='nb'>Array</span> <span class='n'>of</span> <span class='n'>liquified</span> <span class='no'>Jekyll</span><span class='o'>::</span><span class='no'>Post</span> <span class='n'>objects</span><span class='p'>)</span><span class='o'>.</span><span class='n'>.</span><span class='o'>.]</span><span class='p'>,</span>
+<span class='lineno'>69</span>    <span class='s2'>&quot;templating&quot;</span><span class='o'>=&gt;</span>
+<span class='lineno'>70</span>     <span class='o'>[.</span><span class='n'>.</span><span class='o'>.</span><span class='p'>(</span><span class='nb'>Array</span> <span class='n'>of</span> <span class='n'>liquified</span> <span class='no'>Jekyll</span><span class='o'>::</span><span class='no'>Post</span> <span class='n'>objects</span><span class='p'>)</span><span class='o'>.</span><span class='n'>.</span><span class='o'>.]</span><span class='p'>,</span>
+<span class='lineno'>71</span>    <span class='s2'>&quot;liquid&quot;</span><span class='o'>=&gt;</span>
+<span class='lineno'>72</span>     <span class='o'>[.</span><span class='n'>.</span><span class='o'>.</span><span class='p'>(</span><span class='nb'>Array</span> <span class='n'>of</span> <span class='n'>liquified</span> <span class='no'>Jekyll</span><span class='o'>::</span><span class='no'>Post</span> <span class='n'>objects</span><span class='p'>)</span><span class='o'>.</span><span class='n'>.</span><span class='o'>.]</span><span class='p'>,</span>
+<span class='lineno'>73</span>    <span class='s2'>&quot;posts&quot;</span><span class='o'>=&gt;</span>
+<span class='lineno'>74</span>     <span class='o'>[.</span><span class='n'>.</span><span class='o'>.</span><span class='p'>(</span><span class='nb'>Array</span> <span class='n'>of</span> <span class='n'>liquified</span> <span class='no'>Jekyll</span><span class='o'>::</span><span class='no'>Post</span> <span class='n'>objects</span><span class='p'>)</span><span class='o'>.</span><span class='n'>.</span><span class='o'>.]</span>
+<span class='lineno'>75</span>   <span class='p'>}</span>
+<span class='lineno'>76</span> <span class='p'>}</span>
+</code></pre>
+</div>
 <h3 id='sitewide_custom_data'>Sitewide Custom Data</h3>
 
 <p>Set sitewide custom data using the config file.</p>

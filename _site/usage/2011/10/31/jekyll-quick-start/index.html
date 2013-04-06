@@ -33,21 +33,24 @@
 
 <p>In order to preview your blog locally you&#8217;ll need to install the Jekyll ruby gem. Note gem dependencies will also be installed. You don&#8217;t have to run a local version but it helps if you want to preview your content before publishing.</p>
 <div class='highlight'><pre><code class='bash'><span class='nv'>$ </span>gem install jekyll
-</code></pre></div>
+</code></pre>
+</div>
 <p>If you run into a problem please consult the original <a href='https://github.com/mojombo/jekyll/wiki/Install'>Jekyll installation documentation</a>. You can also <a href='https://github.com/plusjade/jekyll-bootstrap/issues'>create a support issue</a> using GitHub Issues.</p>
 
 <p>Once the gem is installed you can navigate to your Jekyll-Bootstrap directory. If you&#8217;ve followed the homepage instructions this will be: USERNAME.github.com. Once in the directory you&#8217;ll run jekyll with server support:</p>
 <div class='highlight'><pre><code class='bash'><span class='nv'>$ </span><span class='nb'>cd </span>USERNAME.github.com 
 <span class='nv'>$ </span>jekyll --server
 <span class='c'># remember to change USERNAME to your GitHub username.</span>
-</code></pre></div>
+</code></pre>
+</div>
 <p>Your blog is now available at: <a href='http://localhost:4000/'>http://localhost:4000/</a>.</p>
 
 <h2 id='2_create_a_post'>2. Create a Post</h2>
 
 <p>Create posts easily via rake task:</p>
 <div class='highlight'><pre><code class='bash'><span class='nv'>$ </span>rake post <span class='nv'>title</span><span class='o'>=</span><span class='s2'>&quot;Hello World&quot;</span>
-</code></pre></div>
+</code></pre>
+</div>
 <p>The rake task automatically creates a file with properly formatted filename and YAML Front Matter. Make sure to specify your own title. By default, the date is the current date.</p>
 
 <p>The rake task will never overwrite existing posts unless you tell it to.</p>
@@ -56,14 +59,17 @@
 
 <p>Create pages easily via rake task:</p>
 <div class='highlight'><pre><code class='bash'><span class='nv'>$ </span>rake page <span class='nv'>name</span><span class='o'>=</span><span class='s2'>&quot;about.md&quot;</span>
-</code></pre></div>
+</code></pre>
+</div>
 <p>Create a nested page:</p>
 <div class='highlight'><pre><code class='bash'><span class='nv'>$ </span>rake page <span class='nv'>name</span><span class='o'>=</span><span class='s2'>&quot;pages/about.md&quot;</span>
-</code></pre></div>
+</code></pre>
+</div>
 <p>Create a page with a &#8220;pretty&#8221; path:</p>
 <div class='highlight'><pre><code class='bash'><span class='nv'>$ </span>rake page <span class='nv'>name</span><span class='o'>=</span><span class='s2'>&quot;pages/about&quot;</span>
 <span class='c'># this will create the file: ./pages/about/index.html</span>
-</code></pre></div>
+</code></pre>
+</div>
 <p>The rake task automatically creates a page file with properly formatted filename and YAML Front Matter as well as includes the Jekyll Bootstrap &#8220;setup&#8221; file.</p>
 
 <h3 id='jekyllbootstrap_example_pages'>Jekyll-Bootstrap Example Pages</h3>
@@ -138,7 +144,8 @@
 <div class='highlight'><pre><code class='bash'><span class='nv'>$ </span>git add .
 <span class='nv'>$ </span>git commit -m <span class='s2'>&quot;Add new content&quot;</span>
 <span class='nv'>$ </span>git push origin master
-</code></pre></div>
+</code></pre>
+</div>
 <p>A GitHub post-commit hook will automatically deploy your changes to your hosted blog. You will receive a success or failure notice for every commit you make to your blog.</p>
 
 <h2 id='5_customize'>5. Customize</h2>
