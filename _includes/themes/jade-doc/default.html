@@ -11,7 +11,7 @@
   <link href="{{ ASSET_PATH }}/css/syntax.css?body=1" rel="stylesheet" type="text/css" media="all">
 </head>
 <body>
-  <div class="container" style="position:relative">
+  <div class="container" style="position:absolute; left:350px;">
     
     <div id="main-content" class="content">
       <div class="row">
@@ -20,13 +20,27 @@
           {% include JB/sharing %}
         </div>
         {{ content }}
+        <div id="twitter_widget">
+          <a class="twitter-timeline" href="https://twitter.com/ORURISAYP" data-widget-id="296503418636341248">Tweets by @ORURISAYP</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </div>
       </div>
       </div>
     </div>
         
     <div class="sidebar">
-      <div id="logo"><img style="border: 20; height: 125px; width: 160px;" src="/assets/images/orurisalogo.png"></div>
-      <h4>Start Blogging</h4>
+      <div id="logo"><img style="border: 20; height: 200px; width: 250px;" src="/assets/images/orurisalogo.png"></div>
+      <h4>Upcoming Events</h4>
+      <div id="gcal">
+        <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=200&amp;wkst=1&amp;bgcolor=%23009900&amp;src=0epfumh132ctvf7shu0e8fjjv4%40group.calendar.google.com&amp;color=%238C500B&amp;ctz=America%2FLos_Angeles" style=" border-width:0 " width="250" height="200" frameborder="0" scrolling="no"></iframe>
+      </div>
+      <h4>Blog</h4>
+      <ul class="posts">
+        {% for post in site.posts %}
+        <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
+      <!--<h4>Start Blogging</h4>
       <ul>
         <li><a href="/">Home</a></li>
         {% assign pages_list = site.categories.usage %}  
@@ -57,7 +71,7 @@
         {% assign pages_list = site.pages %}
         {% assign group = 'project' %}
         {% include JB/pages_list %}
-      </ul>
+      </ul>-->
 
     </div>
     
