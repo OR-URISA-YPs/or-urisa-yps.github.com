@@ -20,11 +20,11 @@ html, body {
 .sidebar {
   position:absolute;
   top:30px;
-  left:-300px;
-  width: 275px;
+  left:-320px;
+  width: 280px;
   height:100%;
   background:transparent;
-   ox-shadow: inset 1px -2px 18px #ccc;
+  /*box-shadow: inset 1px -2px 18px #ccc;*/
   overflow:auto;
   z-index:0;
 }

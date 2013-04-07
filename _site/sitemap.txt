@@ -13,13 +13,4 @@ or-urisa-yps/sitemap.txt
 or-urisa-yps/tags.html
 or-urisa-yps/usage/index.html
 
-or-urisa-yps/lessons/2011/12/29/jekyll-introduction
-or-urisa-yps/lessons/2011/12/29/jekyll-introduction
-or-urisa-yps/api/2011/11/30/template-data-api
-or-urisa-yps/api/2011/11/29/jekyll-liquid-api
-or-urisa-yps/api/2011/11/28/bootstrap-api
-or-urisa-yps/api/2011/11/27/theme-api
-or-urisa-yps/usage/2011/10/31/jekyll-quick-start
-or-urisa-yps/usage/2011/10/30/jekyll-theming
-or-urisa-yps/usage/2011/10/29/blog-configuration
-or-urisa-yps/usage/2011/10/28/deployment-and-hosting
+or-urisa-yps/general/2013/04/06/welcome-young-professionals
