@@ -8,9 +8,8 @@
 5. Save it in _posts
 6. Test it on the site by going to the directory in your terminal, typing jekyll --server, and going to localhost:4000 in your browser
 7. After checking, ctrl-C to stop the server
-8. git add ONLY THIS FILE, commit
-9. If all looks well, push to your GitHub fork
-10. Do a pull request back to the original repo
+8. If all looks well, git add ONLY THIS FILE, commit, push to your GitHub fork
+9. Do a pull request back to the original repo
 
 #### Notes
 
