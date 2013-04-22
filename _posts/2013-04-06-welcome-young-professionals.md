@@ -10,7 +10,7 @@ description: |
 
 ### New website
 
-Update your links! If you're interested in contributing a blog post, please [contact us](mailto:oregon-urisa-young-professionals@googlegroups.com).
+Update your links! If you're interested in contributing a blog post, please [contact us](mailto:orurisayp@gmail.com).
 
 ## Upcoming events
 
