@@ -1,10 +1,10 @@
 ---
-layout: post
-category : tips
-tags : [tips]
+title: Neat (and Free) Geodata Conversion Tools
+redirect_from:
+  - /general/2013/04/06/welcome-young-professionals
+tags:
+  - tips
 ---
-
-## Neat (and Free) Geodata Conversion Tools
 
 by Mele Sax-Barnett
 

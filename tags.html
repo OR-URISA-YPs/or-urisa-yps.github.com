@@ -4,18 +4,33 @@ title: Tags
 header: Posts By Tag
 group: navigation
 ---
-{% include JB/setup %}
 
 <ul class="tag_box inline">
-  {% assign tags_list = site.tags %}  
-  {% include JB/tags_list %}
+  {% if tags_list.first[0] == null %}
+    {% for tag in tags_list %}
+      <li><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}-ref">{{ tag }} <span>{{ site.tags[tag].size }}</span></a></li>
+    {% endfor %}
+  {% else %}
+    {% for tag in tags_list %}
+      <li><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag[0] }}-ref">{{ tag[0] }} <span>{{ tag[1].size }}</span></a></li>
+    {% endfor %}
+  {% endif %}
 </ul>
 
 
-{% for tag in site.tags %} 
+{% for tag in site.tags %}
   <h2 id="{{ tag[0] }}-ref">{{ tag[0] }}</h2>
   <ul>
-    {% assign pages_list = tag[1] %}  
-    {% include JB/pages_list %}
+    {% for node in tag[1] %}
+      {% if node.title != null %}
+        {% if group == null or group == node.group %}
+          {% if page.url == node.url %}
+          <li class="active"><a href="{{ BASE_PATH }}{{node.url}}" class="active">{{node.title}}</a></li>
+          {% else %}
+          <li><a href="{{ BASE_PATH }}{{node.url}}">{{node.title}}</a></li>
+          {% endif %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
   </ul>
 {% endfor %}

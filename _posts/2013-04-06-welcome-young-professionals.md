@@ -1,12 +1,11 @@
 ---
-layout: post
-category : general
-tags : [general]
-description: |
-  First post
+title: Welcome, Young Professionals!
+description: First post!
+redirect_from:
+  - /tips/2013/04/16/neat-and-free-geodata-conversion-tools/
+tags:
+  - general
 ---
-
-## Welcome, Young Professionals! 
 
 ### New website
 
