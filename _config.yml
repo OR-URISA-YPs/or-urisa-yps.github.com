@@ -10,7 +10,7 @@ author:
 
 permalink: /posts/:year/:month/:day/:title
 
-highlighter: pygments
+highlighter: rouge
 timezone: America/Los_Angeles
 encoding: utf-8
 
