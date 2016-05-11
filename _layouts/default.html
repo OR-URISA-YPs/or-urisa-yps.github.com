@@ -1,6 +1,53 @@
----
-theme :
-  name : jade-doc
----
-{% include JB/setup %}
-{% include themes/jade-doc/default.html %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{% if page.head_title %}{{ page.head_title }} | {% else %}{{ page.title }} | {% endif %}OR-URISA YP</title>
+  {% if page.description %}
+  <meta name="description" content="{{ page.description }}">
+  {% endif %}
+  <link href="/assets/css/bootstrap-1.4.0-min.css" rel="stylesheet" type="text/css" media="all">
+  <link href="/assets/css/style.css" rel="stylesheet" type="text/css" media="all">
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body>
+  <div class="container" style="position:absolute; left:370px;">
+    <div id="main-content" class="content">
+      <div class="row">
+        <div class="span10 offset1">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <div id="logo"><a href="/"><img style="border: 20; height: 200px; width: 250px; bottom: 10px;" src="/assets/images/orurisalogo.png"></a></div>
+      <h4>Upcoming Events</h4>
+      <div id="gcal">
+        <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=150&amp;wkst=1&amp;bgcolor=%23009900&amp;src=0epfumh132ctvf7shu0e8fjjv4%40group.calendar.google.com&amp;color=%238C500B&amp;ctz=America%2FLos_Angeles" style=" border-width:0 " width="250" height="150" frameborder="0" scrolling="no"></iframe>
+      </div>
+      <p>More events at <a href="http://www.orurisa.org/events">ORURISA.org</a></p>
+      <h4>Blog</h4>
+      <ul class="posts">
+        {% for post in site.posts %}
+        <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  {% if site.safe %}
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', '{{ site.analytics.google.tracking_id }}']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  {% endif %}
+</body>
+</html>

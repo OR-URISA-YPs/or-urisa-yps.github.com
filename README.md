@@ -19,7 +19,6 @@ For example:
 ```md
 ---
 layout: post
-category: tips
 title: The Title of your Blog
 ---
 ```
