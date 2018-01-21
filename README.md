@@ -8,49 +8,49 @@ This is the source for the [OR-URISA YP website](http://orurisayp.org/).
 2. In your fork, go to the `_posts` directory.
 3. Create a new file.
 
-    ⚠️ **How you name files in this folder is important.**
-    
-    Jekyll requires blog post files to be named according to the following format:
-    
-    `YEAR-MONTH-DAY-lower-case-with-dashes-for-spaces.md`
+⚠️ **How you name files in this folder is important.**
 
-    Here's example:
+Jekyll requires blog post files to be named according to the following format:
+    
+```YEAR-MONTH-DAY-lower-case-with-dashes-for-spaces.md```
 
-    `2013-04-16-neat-and-free-geodata-conversion-tools.md`
-    
-    I strongly recommend keeping all letters lowercase, as this will end up being the URL of the post. For example, the above post's filename would result in a post being available at the following address:
-    
-    `http://orurisayp.org/posts/2013/04/16/neat-and-free-geodata-conversion-tools`
+Here's the example:
+
+```2013-04-16-neat-and-free-geodata-conversion-tools.md```
+
+I strongly recommend keeping all letters lowercase, as this will end up being the URL of the post. For example, the above post's filename would result in a post being available at the following address:
+
+`http://orurisayp.org/posts/2013/04/16/neat-and-free-geodata-conversion-tools`
 
 4. Write a new blog post using the Github editor! You'll need a little metadata at the top:
 
-    ```md
-    ---
-    layout: post
-    title: The Title of your Blog
-    ---
-    ```
+```md
+---
+layout: post
+title: The Title of your Blog
+---
+```
 
-    Once you've filled that out, you can write the article itself using [Markdown](https://guides.github.com/features/mastering-markdown/). Here's some example content:
+Once you've filled that out, you can write the article itself using [Markdown](https://guides.github.com/features/mastering-markdown/). Here's some example content:
 
-    ```md
-    # Blog Title
+```md
+# Blog Title
 
-    This is a paragraph!
+This is a paragraph!
 
-    - this
-    - is
-    - a
-    - list
+- this
+- is
+- a
+- list
 
-    [Here's a link](http://orurisayp.org/).
+[Here's a link](http://orurisayp.org/).
 
-    ![This is a picture](http://orurisayp.org/assets/images/orurisalogo.png)
-    ```
+![This is a picture](http://orurisayp.org/assets/images/orurisalogo.png)
+```
 
 5. Make sure to commit your changes when you're done by filling out the **Commit changes** section at the bottom of the page and clicking the big green button.
 
-    If you're comfortable working with Ruby and the command line, you can try previewing the site locally by following the [installation](#Installation) instructions below and starting the Jekyll server locally.
+If you're comfortable working with Ruby and the command line, you can try previewing the site locally by following the [installation](#Installation) instructions below and starting the Jekyll server locally.
 
 6. When you're happy with your post, open a pull request to merge your changes into the main repository.
 7. An admin for the OR-URISA YP github organization will review your pull request and merge it if everything looks okay. Hooray! :tada:
